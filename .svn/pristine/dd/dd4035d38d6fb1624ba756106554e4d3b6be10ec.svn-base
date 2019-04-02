@@ -1,0 +1,219 @@
+.maps {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.btn-group {
+  z-index: 9999;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  background-color: #fff;
+  padding: 7px 10px 7px 5px;
+  border-radius: 4px;
+  border: 1px solid #90a3b9;
+  > li {
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    margin-left: 5px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+    &:nth-child(1) {
+      background-image: url(../../../assets/images/synthesis/alarm.png);
+      background-position-x: -52px;
+      &.no-voice {
+        background-position-x: 0;
+      }
+    }
+    &:nth-child(3) {
+      background-image: url(../../../assets/images/synthesis/screen-1.png);
+      &:hover {
+        background-position-x: -26px;
+      }
+      &.active {
+        background-position-x: -52px;
+      }
+    }
+    &:nth-child(4) {
+      background-image: url(../../../assets/images/synthesis/screen-2.png);
+      &:hover {
+        background-position-x: -26px;
+      }
+      &.active {
+        background-position-x: -52px;
+      }
+    }
+    &:nth-child(5) {
+      background-image: url(../../../assets/images/synthesis/screen-4.png);
+      &:hover {
+        background-position-x: -26px;
+      }
+      &.active {
+        background-position-x: -52px;
+      }
+    }
+    &:nth-child(6) {
+      background-image: url(../../../assets/images/synthesis/sync.png);
+      background-position-x: -52px;
+      &.async {
+        background-position-x: 0;
+      }
+    }
+    &:nth-child(8) {
+      background-image: url(../../../assets/images/synthesis/full-cut.png);
+      &:hover {
+        background-position-x: -26px;
+      }
+    }
+    &:nth-child(9) {
+      background-image: url(../../../assets/images/synthesis/area-cut.png);
+      &:hover {
+        background-position-x: -26px;
+      }
+    }
+    &.switch {
+      background-position-x: -36px;
+    }
+  }
+  .split-line {
+    width: 1px;
+    height: 22px;
+    background-color: #dbdbdb;
+    margin: 2px 5px 2px 10px;
+  }
+}
+
+.map-group {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  & > div {
+    float: left;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+  }
+  &.split-screen-2 {
+    & > div {
+      width: 50%;
+      border: 1px solid #000;
+    }
+    & > div.active {
+      border-color: red;
+    }
+  }
+  &.split-screen-4 {
+    & > div {
+      width: 50%;
+      height: 50%;
+      border: 1px solid #000;
+    }
+    & > div.active {
+      border-color: red;
+    }
+  }
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.base-layer {
+  z-index: 9999;
+  position: absolute;
+  top: 60px;
+  right: 5px;
+  .icon {
+    width: 52px;
+    height: 43px;
+    background: url(../../../assets/images/synthesis/icon-default.png) no-repeat;
+    cursor: pointer;
+    &:hover {
+      background-position-x: -52px;
+    }
+    &.active {
+      background-position-x: -104px;
+    }
+  }
+
+  .bl-panel {
+    position: absolute;
+    top: 0;
+    right: 72px;
+    width: 380px;
+    padding: 10px 10px 0 10px;
+    background-color: #fff;
+    border: 1px solid #90a3b9;
+    border-radius: 4px;
+    display: flex;
+  }
+  .bl-list {
+    width: 248px;
+    overflow: hidden;
+    margin-bottom: 0;
+    >li {
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  .bl-ele-list {
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    >li {
+      >span {
+        display: inline-block;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+
+.fade1-enter-active, .fade1-leave-active {
+  transition: opacity .3s;
+}
+.fade1-enter, .fade1-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+// 这里fade开头的class可能受到了全局类的影响
+// .fade-enter-active,
+// .fade-leave-active {
+//   transition: all .3s;
+// }
+// .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+//   opacity: 0;
+// }
+
+.border-right-empty {
+  position: absolute;
+  top: 11px;
+  right: -14px;
+  width: 0;
+  height: 0;
+  border-left: 14px solid #90a3b9;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+
+}
+.border-right-empty span {
+  position: absolute;
+  left: -14px;
+  top: -9px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 13px solid #fff;
+  border-bottom: 9px solid transparent;
+  border-top: 9px solid transparent;
+
+}

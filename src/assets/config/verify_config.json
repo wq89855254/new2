@@ -1,0 +1,120 @@
+[{
+    "id": "verify",
+    "fcstName": "检验",
+    "activeTypeName": "veri",
+    "dateList": [
+        "06h",
+        "18h"
+    ],
+    "date": "06h",
+    "aging": "000",
+    "agingList": [
+        "000"
+    ],
+    "contents": [
+        {
+            "id": "verify",
+            "name": "veri",
+            "typeName": "veri",
+            "hour": "08",
+            "hourTitle": "时间",
+            "hourList": [
+                "08",
+                "14",
+                "20"
+            ],
+            "activeElementId": "veri_1",
+            "date": "",
+            "sections": [
+                {
+                    "title": "预报产品逐日落区检验",
+                    "items": [
+                        {
+                            "id": "veri_1",
+                            "name": "检验一",
+                            "activeLevel": "",
+                            "levels": []
+                        },
+                        {
+                            "id": "veri_2",
+                            "name": "检验二",
+                            "activeLevel": "",
+                            "levels": []
+                        }
+                    ]
+                },
+                {
+                    "title": "预报产品逐月检验",
+                    "items": [
+                        {
+                            "id": "veri_3",
+                            "name": "雷暴_逐日评分",
+                            "activeLevel": "",
+                            "levels": []
+                        },
+                        {
+                            "id": "veri_4",
+                            "name": "冰雹与雷暴大风_逐日评分",
+                            "activeLevel": "",
+                            "levels": []
+                        },
+                        {
+                            "id": "veri_5",
+                            "name": "短时强降水_逐日评分",
+                            "activeLevel": "",
+                            "levels": []
+                        },
+                        {
+                            "id": "veri_6",
+                            "name": "强对流_逐日评分",
+                            "activeLevel": "",
+                            "levels": []
+                        },
+                        {
+                            "id": "veri_7",
+                            "name": "领班_雷暴",
+                            "activeLevel": "",
+                            "levels": []
+                        },
+                        {
+                            "id": "veri_8",
+                            "name": "领班_冰雹与雷暴大风",
+                            "activeLevel": "",
+                            "levels": []
+                        },
+                        {
+                            "id": "veri_9",
+                            "name": "领班_短时强降水",
+                            "activeLevel": "",
+                            "levels": []
+                        },
+                        {
+                            "id": "veri_10",
+                            "name": "领班_综合评分",
+                            "activeLevel": "",
+                            "levels": []
+                        },
+                        {
+                            "id": "veri_11",
+                            "name": "主班_雷暴",
+                            "activeLevel": "",
+                            "levels": []
+                        },
+                        {
+                            "id": "veri_12",
+                            "name": "主班_强对流",
+                            "activeLevel": "",
+                            "levels": []
+                        },
+                        {
+                            "id": "veri_13",
+                            "name": "主班_综合评分",
+                            "activeLevel": "",
+                            "levels": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}]

@@ -1,0 +1,139 @@
+.box {
+  position: relative;
+  height: 60px;
+  display: flex;
+}
+
+.tool {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+  > div {
+    display: flex;
+    align-items: center;
+  }
+  > div:first-child {
+    margin-bottom: 5px;
+  }
+  .name {
+    display: inline-block;
+    padding-right: 10px;
+    color: #40598b;
+    font-size: 13px;
+    font-family: "Microsoft YaHei", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+}
+
+.time {
+  flex: 1;
+  height: 100%;
+  display: flex;
+
+  .left-btn {
+    width: 22px;
+    height: 100%;
+    margin-right: 5px;
+    background: url(../../../assets/images/aging/left.png) no-repeat -44px center;
+    cursor: pointer;
+  }
+  .left-btn:hover {
+    background-position-x: -22px;
+  }
+  .right-btn {
+    width: 22px;
+    height: 100%;
+    margin: 0 5px;
+    background: url(../../../assets/images/aging/right.png) no-repeat -44px center;
+    cursor: pointer;
+  }
+  .right-btn:hover {
+    background-position-x: -22px;
+  }
+  .btn-disabled,
+  .btn-disabled:hover {
+    background-position-x: 0;
+    cursor: not-allowed;
+  }
+
+  .list {
+    flex: 1;
+    margin: 0;
+    display: flex;
+    margin-top: 26px;
+    height: 8px;
+    background-color: #c9ddf9;
+    border-radius: 4px;
+    > li {
+      // flex: 1;
+      width: 7.142857142857143%;
+    }
+  }
+}
+
+.item {
+  position: relative;
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    margin-left: -5px;
+    margin-top: -1px;
+    border-radius: 50%;
+    border: 2px solid #bbcade;
+    background-color: #f6faff;
+    cursor: pointer;
+    &.active {
+      width: 12px;
+      height: 12px;
+      margin-left: -6px;
+      margin-top: -2px;
+      border-width: 1px;
+      border-color: rgb( 21, 125, 215 );
+      background-image: linear-gradient( 0deg, rgb(135,188,234) 4%, rgb(10,119,213) 51%, rgb(209,229,247) 100%);
+    }
+    &.active::after {
+      background-color: transparent !important;
+    }
+  }
+  .circle-loop.circle::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #bbcade;
+  }
+
+  .aging {
+    position: absolute;
+    top: -24px;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 13px;
+    color: #3670c1;
+    cursor: pointer;
+    font-family: Arial, "Microsoft YaHei", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  .date {
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 13px;
+    color: #1355ce;
+    cursor: pointer;
+    font-family: Arial, "Microsoft YaHei", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+}

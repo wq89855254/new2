@@ -1,0 +1,23 @@
+.time-sclect {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 0 3px;
+  background-color: #f3f4f5;
+  border: 1px solid #e6e8ea;
+  border-radius: 3px;
+  white-space: nowrap;
+  > div {
+    padding-right: 5px;
+    > span {
+      display: inline-block;
+      padding-right: 5px;
+      color: #40598b;
+    }
+  }
+  /deep/ .ant-calendar-picker .ant-input,
+  /deep/ .ant-select .ant-select-selection-selected-value {
+    color: #353535;
+    font-family: Arial, "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+}

@@ -1,0 +1,652 @@
+[
+    {
+        "id": "OBSConvection",
+        "fcstName": "强对流",
+        "activeTypeName": "OBSC",
+        "dateList": [
+            "24h",
+            "21h",
+            "12h",
+            "06h",
+            "03h",
+            "01h"
+        ],
+        "date": "24h",
+        "aging": "000",
+        "agingList": [
+            "000"
+        ],
+        "contents": [
+            {
+                "id": "OBSConvection",
+                "name": "OBSC",
+                "typeName": "OBSC",
+                "hour": "00",
+                "hourTitle": "时间",
+                "hourList": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23"
+                ],
+                "activeElementId": "obsc_1",
+                "date": "",
+                "sections": [
+                    {
+                        "title": "常规观测",
+                        "items": [
+                            {
+                                "id": "obsc_1",
+                                "name": "强对流综合",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obsc_2",
+                                "name": "雷暴大风",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obsc_3",
+                                "name": "冰雹(人工站)",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obsc_4",
+                                "name": "冰雹(灾情报)",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obsc_5",
+                                "name": "冰雹(识别)",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obsc_6",
+                                "name": "短时强降水(无质控)",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obsc_7",
+                                "name": "雷暴大风(自动站)",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obsc_8",
+                                "name": "近海对流和大风",
+                                "activeLevel": "",
+                                "levels": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "OBSAws",
+        "fcstName": "自动站",
+        "activeTypeName": "OBSA",
+        "dateList": [
+            "24h",
+            "12h",
+            "06h",
+            "03h",
+            "01h"
+        ],
+        "aging": "000",
+        "agingList": [
+            "000"
+        ],
+        "date": "24h",
+        "contents": [
+            {
+                "id": "OBSAws",
+                "name": "OBSA",
+                "dateSwitch": false,
+                "typeName": "OBSA",
+                "hour": "",
+                "hourList": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23"
+                ],
+                "activeElementId": "obsa_1",
+                "date": "",
+                "sections": [
+                    {
+                        "title": "自动站观测",
+                        "items": [
+                            {
+                                "id": "obsa_1",
+                                "name": "降水量",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obsa_2",
+                                "name": "暴雨预警",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obsa_3",
+                                "name": "站点GPS水汽(滞后2小时)",
+                                "activeLevel": "",
+                                "levels": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "OBSLight",
+        "fcstName": "闪电",
+        "activeTypeName": "OBSL",
+        "dateList": [
+            "24h",
+            "21h",
+            "12h",
+            "06h",
+            "03h",
+            "01h",
+            "30m",
+            "10m"
+        ],
+        "aging": "000",
+        "agingList": [
+            "000","000","000","000","000","000","000"
+        ],
+        "date": "24h",
+        "contents": [
+            {
+                "id": "OBSLight",
+                "name": "OBSL",
+                "dateSwitch": true,
+                "minSwitch": true,
+                "typeName": "OBSL",
+                "minuteList": [
+                    "00",
+                    "10",
+                    "20",
+                    "30",
+                    "40",
+                    "50"
+                ],
+                "minute": "00",
+                "hour": "",
+                "hourList": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23"
+                ],
+                "activeElementId": "obsl_1",
+                "date": "",
+                "sections": [
+                    {
+                        "title": "滑动闪电综合",
+                        "items": [
+                            {
+                                "id": "obsl_1",
+                                "name": "闪电综合3小时滑动",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obsl_2",
+                                "name": "闪电综合2小时滑动",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obsl_3",
+                                "name": "闪电综合1小时滑动",
+                                "activeLevel": "",
+                                "levels": []
+                            }
+                        ]
+                    },
+                    {
+                        "title": "闪电监测",
+                        "items": [
+                            {
+                                "id": "obsl_4",
+                                "name": "闪电综合",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obsl_5",
+                                "name": "总闪密度",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obsl_6",
+                                "name": "正闪密度",
+                                "activeLevel": "",
+                                "levels": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "OBSSatellite",
+        "fcstName": "卫星",
+        "activeTypeName": "OBSS",
+        "dateList": [
+            "24h",
+            "12h",
+            "06h",
+            "03h",
+            "01h"
+        ],
+        "aging": "000",
+        "agingList": [
+            "000"
+        ],
+        "date": "24h",
+        "contents": [
+            {
+                "id": "OBSSatellite",
+                "name": "OBSS",
+                "typeName": "OBSS",
+                "hour": "",
+                "hourList": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23"
+                ],
+                "activeElementId": "obss_2",
+                "date": "",
+                "dateSwitch": true,
+                "sections": [
+                    {
+                        "title": "时间累积次数",
+                        "items": [
+                            {
+                                "id": "obss_1",
+                                "name": "基于红外亮温的深对流识别",
+                                "activeLevel": "",
+                                "levels": []
+                            }
+                        ]
+                    },
+                    {
+                        "title": "逐小时或30分",
+                        "items": [
+                            {
+                                "id": "obss_2",
+                                "name": "MCS识别和追踪",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obss_3",
+                                "name": "基于云分类的深对流识别",
+                                "activeLevel": "",
+                                "levels": []
+                            },{
+                                "id": "obss_10",
+                                "name": "红外云图",
+                                "activeLevel": "",
+                                "levels": []
+                            },{
+                                "id": "obss_11",
+                                "name": "可见光云图",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obss_4",
+                                "name": "-32℃MCS识别和追踪",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obss_5",
+                                "name": "-42℃MCS识别和追踪",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obss_6",
+                                "name": "-52℃MCS识别和追踪",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obss_7",
+                                "name": "-62℃MCS识别和追踪",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obss_8",
+                                "name": "-72℃MCS识别和追踪",
+                                "activeLevel": "",
+                                "levels": []
+                            },
+                            {
+                                "id": "obss_9",
+                                "name": "短时强降水判识产品（日间）",
+                                "activeLevel": "",
+                                "levels": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "OBSRadar",
+        "fcstName": "雷达",
+        "activeTypeName": "OBSR",
+        "dateList": [
+            "24h",
+            "12h",
+            "06h",
+            "03h",
+            "01h"
+        ],
+        "aging": "000",
+        "agingList": [
+            "000"
+        ],
+        "date": "24h",
+        "contents": [
+            {
+                "id": "OBSRadar",
+                "name": "OBSR",
+                "typeName": "OBSR",
+                "hour": "",
+                "area": "全国",
+                "interval": "2",
+                "speed": "2",
+                "areaList": [
+                    {
+                        "name": "全国",
+                        "id": "10"
+                    },
+                    {
+                        "name": "华北",
+                        "id": "1"
+                    },
+                    {
+                        "name": "东北",
+                        "id": "0"
+                    },
+                    {
+                        "name": "华东",
+                        "id": "5"
+                    },
+                    {
+                        "name": "华南",
+                        "id": "2"
+                    },
+                    {
+                        "name": "华中",
+                        "id": "4"
+                    },
+                    {
+                        "name": "西南",
+                        "id": "6"
+                    },
+                    {
+                        "name": "西北",
+                        "id": "3"
+                    },
+                    {
+                        "name": "长江",
+                        "id": "7"
+                    },
+                    {
+                        "name": "黄淮",
+                        "id": "8"
+                    },                  {
+                        "name": "东南",
+                        "id": "9"
+                    }
+                ],
+                "areaid":"10",
+                "minuteList": [
+                    "00",
+                    "06",
+                    "12",
+                    "18",
+                    "24",
+                    "30",
+                    "36",
+                    "42",
+                    "48",
+                    "54"
+                ],
+                "minute": "00",
+                "minuteSwitch": true,
+                "startMinute": "00",
+                "endMinute": "00",
+                "startHour": "00",
+                "endHour": "00",
+                "startDate": "",
+                "endDate": "",
+                "hourList": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23"
+                ],
+                "activeElementId": "obss_1",
+                "date": "",
+                "dateSwitch": true,
+                "sections": [
+                    {
+                        "title": "逐6分钟",
+                        "items": [
+                            {
+                                "id": "obss_1",
+                                "name": "雷达拼图",
+                                "activeLevel": "",
+                                "levels": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "windprofileMosaic",
+        "fcstName": "风廓线",
+        "activeTypeName": "ROBS",
+        "dateList": [
+            "01h",
+            "03h",
+            "06h",
+            "12h",
+            "24h"
+        ],
+        "aging": "000",
+        "agingList": [
+            "000"
+        ],
+        "date": "24h",
+        "contents": [
+            {
+                "id": "windprofileMosaic",
+                "name": "ROBS",
+                "typeName": "ROBS",
+                "hour": "",
+                "tabSwitch":false,
+                "minuteSwitch":true,
+                "minuteList":["00","06","12","18","24","30","36","42","48","54"],
+                "high":"150",
+                "minute":"00",
+                "highList":["150","300","600","900","1500","3000","5000"],
+                "pressure":"500",
+                "pressureList":["500","700","850","925"],
+                "hourList": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23"
+                ],
+                "activeElementId": "robs_1",
+                "date": "",
+                "dateSwitch": true,
+                "sections": [
+                    {
+                        "title": "组网监测产品",
+                        "items": [
+                            {
+                                "id": "robs_1",
+                                "name": "风场",
+                                "activeLevel": "",
+                                "levels": []
+                            },                            {
+                                "id": "robs_2",
+                                "name": "综合图",
+                                "activeLevel": "",
+                                "levels": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

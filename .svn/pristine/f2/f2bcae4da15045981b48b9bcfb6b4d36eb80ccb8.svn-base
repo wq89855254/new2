@@ -1,0 +1,38 @@
+.aging-select {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    right: 30px;
+    height: 24px;
+    background-color: #eee;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .scroll-box {
+    height: 100%;
+    white-space: nowrap;
+    display: inline-flex;
+    margin: 0;
+    padding: 0 12px;
+    > li {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 100%;
+      background-color: #ccc;
+      margin-right: 5px;
+      cursor: pointer;
+      &.active {
+        background-color: red;
+        color: #fff;
+      }
+    }
+  }
+}

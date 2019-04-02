@@ -1,0 +1,11 @@
+import Home from "./home/Home.vue";
+import Synthesis from "./synthesis/synthesis.vue";
+import Monitor from "./monitor/monitor.vue";
+import Diagnosis from "./diagnosis/diagnosis.vue";
+import Shorttime from "./shorttime/shorttime.vue";
+import Shortimpending from "./shortimpending/shortimpending.vue";
+import Verify from "./verify/verify.vue";
+import Archive from "./archive/archive.vue";
+
+
+export { Home, Synthesis, Monitor, Diagnosis, Shorttime, Shortimpending, Verify, Archive }

@@ -1,0 +1,124 @@
+.home {
+  position: relative;
+  height: 100%;
+  padding-top: 68px;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 68px;
+  background: url(../../assets/images/header/bg1.jpg) repeat-x;
+  .logo-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .right-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 600px;
+    right: 0;
+    height: 100%;
+  }
+  .menu-item {
+    position: relative;
+    display: inline-block;
+    width: 58px;
+    height: 100%;
+    margin-right: 20px;
+    background-repeat: no-repeat;
+    background-position: -116px -2px;
+    color: #f0f7ff;
+    span {
+      position: absolute;
+      top: 43px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-family: "微软雅黑";
+      font-size: 15px;
+      text-shadow: 0 1px 1px rgba(0, 32, 103, 0.25);
+      transition: all 0.3s;
+    }
+
+    &.synthesis {
+      background-image: url(../../assets/images/menus/synthesis.png);
+    }
+    &.monitor {
+      background-image: url(../../assets/images/menus/monitor.png);
+    }
+    &.diagnosis {
+      background-image: url(../../assets/images/menus/diagnosis.png);
+    }
+    &.shortimpending {
+      background-image: url(../../assets/images/menus/shortimpending.png);
+    }
+    &.shorttime {
+      background-image: url(../../assets/images/menus/shorttime.png);
+    }
+    &.verify {
+      background-image: url(../../assets/images/menus/verify.png);
+    }
+    &.archive {
+      background-image: url(../../assets/images/menus/archive.png);
+    }
+
+    &:hover {
+      color: #fff;
+      background-position-x: 0;
+      span {
+        text-shadow: 0 1px 1px rgba(0, 32, 103, 0.58);
+      }
+    }
+    &.active {
+      color: #fff;
+      background-position-x: -58px;
+      span {
+        text-shadow: 0 1px 1px rgba(0, 32, 103, 0.95);
+      }
+    }
+  }
+}
+
+.content {
+  // position: relative;
+  height: 100%;
+  overflow: hidden;
+  
+  background-color: #e8ebec;
+  background-image: linear-gradient(180deg, #e8ebec 53%, #aec8e0 100%);
+}
+// .zoom{
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   bottom: 0;
+//   right: 0;
+//   background: #000000a5;
+//   z-index: 55555;
+//   display: none;
+//   & img{
+//     height: 100%;
+//     margin: 0 auto;
+//     display: block;
+//   }
+//   .close{
+//     position: absolute;
+//     right: 10px;
+//     top: 10px;
+//     font-size: 20px;
+//     cursor: pointer;
+//     color:#fff;
+//   }
+// }
+// .zoom_active{
+//   display: block;
+// }

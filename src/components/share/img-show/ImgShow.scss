@@ -1,0 +1,96 @@
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+.img-show {
+  position: relative;
+  @extend .full;
+}
+
+.cover {
+    position: absolute;  
+    top: 0;
+    left: 0;
+}
+
+.img-show-only {
+  @extend .full;
+  overflow: hidden;
+  .img-box {
+    position: relative;
+    // @extend .full;
+    > img {
+      @extend .full;
+      border-radius: 4px;
+    }
+
+  }
+}
+.img-show-many {
+  @extend .full;
+  overflow-x: hidden;
+  overflow-y: auto;
+  .img-box {
+    position: relative;
+    float: left;
+    // width: 50%;
+    // height: 50%;
+    > img {
+      display: block;
+      @extend .full;
+      border-radius: 4px;
+    }
+  }
+}
+
+.dir-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  > img {
+    opacity: 0.6;
+    transition: all 0.3s;
+  }
+  &:hover > img {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.top {
+  top: 0;
+  left: 20%;
+  width: 60%;
+  height: 80px;
+}
+.bottom {
+  bottom: 0;
+  left: 20%;
+  width: 60%;
+  height: 80px;
+}
+.left {
+  top: 15%;
+  left: 0;
+  width: 80px;
+  height: 70%;
+}
+.right {
+  top: 15%;
+  right: 0;
+  width: 80px;
+  height: 70%;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+}

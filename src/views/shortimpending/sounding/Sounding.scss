@@ -1,0 +1,33 @@
+.header-radio {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    // justify-content: space-between;
+    >div {
+        display: flex;
+        // justify-content: center;
+        padding: 5px 0 5px 10px;
+        background-color: #f3f4f5;
+        border: 1px solid #e6e8ea;
+        border-radius: 3px;
+    }
+    >div:first-child {
+        margin-right: 5px;
+
+    }
+    >div:last-child {
+        flex: 1;
+        // margin-left: 5px;
+    }
+}
+
+.area {
+    margin-top: 10px;
+    >span {
+        display: inline-block;
+        margin-right: 5px;
+    }
+    >span:last-of-type {
+        margin-left: 5px;
+    }
+}

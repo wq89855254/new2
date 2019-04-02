@@ -1,0 +1,38 @@
+
+$menusWidth: 360px;
+$topSectionHeight: 60px;
+$sectionPadding: 5px;
+
+
+.shortimpending {
+  position: relative;
+  height: 100%;
+}
+
+
+.menus-section {
+  position: absolute;
+  top: $sectionPadding;
+  left: $sectionPadding;
+  bottom: $sectionPadding;
+  width: $menusWidth;
+  background-color: #fff;
+}
+
+.top-section {
+  position: absolute;
+  top: $sectionPadding;
+  left: $menusWidth + $sectionPadding * 2;
+  right: $sectionPadding;
+  height: $topSectionHeight;
+  background-color: #fff;
+}
+
+.img-section {
+  position: absolute;
+  top: $topSectionHeight + $sectionPadding * 2;
+  left: $menusWidth + $sectionPadding * 2;
+  right: $sectionPadding;
+  bottom: $sectionPadding;
+  background-color: #fff;
+}

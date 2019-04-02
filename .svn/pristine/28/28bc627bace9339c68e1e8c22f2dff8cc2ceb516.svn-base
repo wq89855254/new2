@@ -1,0 +1,11 @@
+.near {
+
+}
+.time-box {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #e6e8ea;
+    background-color: #f3f4f5;
+    border-radius: 4px;
+}

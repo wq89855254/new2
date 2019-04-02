@@ -1,0 +1,113 @@
+.fcst-serve {
+  margin: 0;
+  > li {
+    padding: 3px 0;
+  }
+}
+
+.time-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e6e8ea;
+  background-color: #f3f4f5;
+  border-radius: 4px;
+
+  .ojb-time-top {
+    // border-bottom-color: transparent;
+    // border-bottom-left-radius: 0;
+    // border-bottom-right-radius: 0;
+    padding-bottom: 0;
+    padding-top: 5px;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  .ojb-time-bottom {
+    // border-top-color: transparent;
+    // border-top-left-radius: 0;
+    // border-top-right-radius: 0;
+    padding-top: 0;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+}
+
+
+.element-list {
+  margin: 0;
+  padding: 5px 0;
+  .name {
+    font-size: 13px;
+    color: #1a1a1a;
+    line-height: 23px;
+    font-family: "Microsoft YaHei", "Chinese Quote", -apple-system,
+      BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
+      "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  > li {
+  }
+}
+
+
+.mode-product-layout {
+    margin-top: 10px;
+    position: relative;
+  .list {
+    margin: 0;
+    overflow: hidden;
+    >li {
+      float: left;
+      width: 32%;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 5px;
+      // border: 1px solid #ccc;
+      box-shadow: inset 0 0 8px #dde4e8;
+      background-color: #e7efff;
+      padding: 0 20px;
+      margin-bottom: 5px;
+      cursor: pointer;
+      transition: all .3s;
+    }
+    li:nth-child(3n+2) {
+      margin: 0 2%;
+    }
+    // >li:nth-child(odd) {
+    //   // width: calc(33.333333% - 5px);
+    //   text-align: left;
+    //   // margin-right: 5px;
+    // }
+    // >li:nth-child(even) {
+    //   text-align: right;
+    // }
+  }
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 84px;
+    height: 84px;
+    line-height: 84px;
+    text-align: center;
+    margin-top: -42px;
+    margin-left: -42px;
+    border-radius: 50%;
+    background-color: #e7efff;
+    box-shadow: 1px 1px 4px #666;
+    // box-shadow: inset 0 0 8px #dde4e8;
+    cursor: pointer;
+    transition: all .3s;
+    
+  }
+  .active {
+    // background-color: #81b7f7 !important;
+    background-image: linear-gradient( 0deg, rgb(107,163,216) 0%, rgb(82,151,215) 14%, rgb(141,190,255) 100%);
+    color: #fff;
+    text-shadow: 0 1px 2px #09459a;
+  }
+}

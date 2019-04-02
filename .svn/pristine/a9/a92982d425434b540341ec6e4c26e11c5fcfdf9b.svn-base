@@ -1,0 +1,1923 @@
+[
+  {
+    "id": "manyPattern",
+    "fcstName": "多模式预报",
+    "activeTypeName": "NCEP",
+    "aging": "000",
+    "agingList": [
+      "000",
+      "003",
+      "006",
+      "009",
+      "012",
+      "015",
+      "018",
+      "021",
+      "024",
+      "027",
+      "030",
+      "033",
+      "036",
+      "039",
+      "042",
+      "045",
+      "048",
+      "051",
+      "054",
+      "057",
+      "060",
+      "063",
+      "066",
+      "069",
+      "072",
+      "078",
+      "084",
+      "090",
+      "096",
+      "102",
+      "108",
+      "114",
+      "120",
+      "126",
+      "132",
+      "138",
+      "144",
+      "150",
+      "156",
+      "162",
+      "168"
+    ],
+    "contents": [
+      {
+        "id": "ncep",
+        "name": "NCEP",
+        "typeName": "NCEP",
+        "isStability": false,
+        "activeElementId": "ncep_1",
+        "date": "",
+        "hour": "02",
+        "hourList": ["02", "08", "14", "20"],
+        "contents": [
+          {
+            "tabName": "综合图",
+            "sections": [
+              {
+                "title": "会商",
+                "items": [
+                  {
+                    "id": "ncep_1",
+                    "name": "通用兼短时强降水",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_2",
+                    "name": "冰雹兼温度层结",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_3",
+                    "name": "大风兼湿度层结",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "通用",
+                "items": [
+                  {
+                    "id": "ncep_4",
+                    "name": "500高度、850风场和湿度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_5",
+                    "name": "500高度、925风场、700湿度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_6",
+                    "name": "500高度、700风场、850ΘSE",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_7",
+                    "name": "200风场、500高度、850湿度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_8",
+                    "name": "200散度、500高度、500风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "短时强降水",
+                "items": [
+                  {
+                    "id": "ncep_9",
+                    "name": "BLI、PW、925风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_10",
+                    "name": "BLI、PW、850风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_11",
+                    "name": "850风场、PWAT、700垂直速度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_12",
+                    "name": "925风场、CAPE、850比湿",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_13",
+                    "name": "500高度、850风场、水汽通量散度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_14",
+                    "name": "500高度、850风场、925露点",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_15",
+                    "name": "700风场、PWAT、3KM风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "冰雹雷暴大风",
+                "items": [
+                  {
+                    "id": "ncep_16",
+                    "name": "500温度、850温度、925风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_17",
+                    "name": "500湿度、850湿度、500风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_18",
+                    "name": "500湿度、CAPE(BLI)、925风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_19",
+                    "name": "500温度平流、CAPE(BLI)、925风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_20",
+                    "name": "500涡度平流、CAPE(BLI)、925风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_21",
+                    "name": "500高度、CAPE(BLI)、6Km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_22",
+                    "name": "850风场、CAPE(BLI)、3Km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "冰雹",
+                "items": [
+                  {
+                    "id": "ncep_23",
+                    "name": "BLI、H0(0度 层高度)、6km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "雷暴大风",
+                "items": [
+                  {
+                    "id": "ncep_24",
+                    "name": "DCAPE、MUCAPE、6km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_25",
+                    "name": "DCAPE、MUCAPE、PW",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tabName": "抬升",
+            "sections": [
+              {
+                "title": "无层次",
+                "items": [
+                  {
+                    "id": "ncep_26",
+                    "name": "海平面气压",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_27",
+                    "name": "零度层高度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_28",
+                    "name": "0-1Km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_29",
+                    "name": "0-3Km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_30",
+                    "name": "6Km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_31",
+                    "name": "500hPa涡度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_32",
+                    "name": "500hPa涡度平流",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "高空",
+                "items": [
+                  {
+                    "id": "ncep_33",
+                    "name": "大风速区",
+
+                    "activeLevel": "200",
+                    "levels": ["200", "500", "700", "850", "925"]
+                  },
+                  {
+                    "id": "ncep_34",
+                    "name": "垂直速度",
+
+                    "activeLevel": "700",
+                    "levels": ["700", "850"]
+                  },
+                  {
+                    "id": "ncep_35",
+                    "name": "散度",
+
+                    "activeLevel": "200",
+                    "levels": ["200", "500", "700", "850", "925"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tabName": "水汽",
+            "sections": [
+              {
+                "title": "无层次",
+                "items": [
+                  {
+                    "id": "ncep_36",
+                    "name": "整层可降水量",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_37",
+                    "name": "6小时降水量",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_38",
+                    "name": "6小时对流性降水量",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "高空",
+                "items": [
+                  {
+                    "id": "ncep_39",
+                    "name": "比湿",
+
+                    "activeLevel": "850",
+                    "levels": ["850", "925"]
+                  },
+                  {
+                    "id": "ncep_40",
+                    "name": "露点",
+
+                    "activeLevel": "700",
+                    "levels": ["700", "850", "925"]
+                  },
+                  {
+                    "id": "ncep_41",
+                    "name": "相对湿度",
+
+                    "activeLevel": "500",
+                    "levels": ["500", "700", "850", "925"]
+                  },
+                  {
+                    "id": "ncep_42",
+                    "name": "温度露点差",
+
+                    "activeLevel": "500",
+                    "levels": ["500", "700", "850", "925"]
+                  },
+                  {
+                    "id": "ncep_43",
+                    "name": "水汽通量散度",
+
+                    "activeLevel": "700",
+                    "levels": ["700", "850"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tabName": "不稳定能量",
+            "sections": [
+              {
+                "title": "能量参数",
+                "items": [
+                  {
+                    "id": "ncep_44",
+                    "name": "CAPE",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_45",
+                    "name": "BCAPE",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_46",
+                    "name": "DCAPE",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "稳定度参数",
+                "items": [
+                  {
+                    "id": "ncep_47",
+                    "name": "K",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_48",
+                    "name": "BLI",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_49",
+                    "name": "温差850-500",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_50",
+                    "name": "温差700-500",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_51",
+                    "name": "θse700-500",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_52",
+                    "name": "θse850-500",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "复合参数",
+                "items": [
+                  {
+                    "id": "ncep_53",
+                    "name": "Cs",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ncep_54",
+                    "name": "Ship",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "高空",
+                "items": [
+                  {
+                    "id": "ncep_55",
+                    "name": "温度",
+
+                    "activeLevel": "500",
+                    "levels": ["500", "850", "2M"]
+                  },
+                  {
+                    "id": "ncep_56",
+                    "name": "温度平流",
+
+                    "activeLevel": "500",
+                    "levels": ["500", "850"]
+                  },
+                  {
+                    "id": "ncep_57",
+                    "name": "θse",
+
+                    "activeLevel": "850",
+                    "levels": ["850"]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ec",
+        "name": "ECMWF",
+        "typeName": "EC",
+        "isStability": false,
+        "activeElementId": "ec_1",
+        "date": "",
+        "hour": "08",
+        "hourList": ["08", "20"],
+        "contents": [
+          {
+            "tabName": "综合图",
+            "sections": [
+              {
+                "title": "会商",
+                "items": [
+                  {
+                    "id": "ec_1",
+                    "name": "通用兼短时强降水",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_2",
+                    "name": "冰雹兼温度层结",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_3",
+                    "name": "大风兼湿度层结",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "通用",
+                "items": [
+                  {
+                    "id": "ec_4",
+                    "name": "500高度、850风场和湿度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_5",
+                    "name": "500高度、925风场、700湿度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_6",
+                    "name": "500高度、700风场、850ΘSE",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_7",
+                    "name": "200风场、500高度、850湿度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_8",
+                    "name": "200散度、500高度、500风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "短时强降水",
+                "items": [
+                  {
+                    "id": "ec_9",
+                    "name": "BLI、PW、925风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_10",
+                    "name": "BLI、PW、850风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_11",
+                    "name": "850风场、PWAT、700垂直速度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_12",
+                    "name": "925风场、CAPE、850比湿",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_13",
+                    "name": "500高度、850风场、水汽通量散度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_14",
+                    "name": "500高度、850风场、925露点",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_15",
+                    "name": "700风场、PWAT、3KM风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "冰雹雷暴大风",
+                "items": [
+                  {
+                    "id": "ec_16",
+                    "name": "500温度、850温度、925风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_17",
+                    "name": "500湿度、CAPE(BLI)、925风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_18",
+                    "name": "500温度平流、CAPE(BLI)、925风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_19",
+                    "name": "500涡度平流、CAPE(BLI)、925风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_20",
+                    "name": "500高度、CAPE(BLI)、6Km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_21",
+                    "name": "850风场、CAPE(BLI)、3Km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "冰雹",
+                "items": [
+                  {
+                    "id": "ec_22",
+                    "name": "BLI、H0(0度 层高度)、6km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "雷暴大风",
+                "items": [
+                  {
+                    "id": "ec_23",
+                    "name": "DCAPE、MUCAPE、6km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_24",
+                    "name": "DCAPE、MUCAPE、PW",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tabName": "抬升",
+            "sections": [
+              {
+                "title": "无层次",
+                "items": [
+                  {
+                    "id": "ec_25",
+                    "name": "海平面气压",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_26",
+                    "name": "零度层高度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_27",
+                    "name": "0-1Km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_28",
+                    "name": "0-3Km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_29",
+                    "name": "6Km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_30",
+                    "name": "500hPa涡度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_31",
+                    "name": "500hPa涡度平流",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "高空",
+                "items": [
+                  {
+                    "id": "ec_32",
+                    "name": "大风速区",
+
+                    "activeLevel": "200",
+                    "levels": ["200", "500", "700", "850", "925"]
+                  },
+                  {
+                    "id": "ec_33",
+                    "name": "垂直速度",
+
+                    "activeLevel": "700",
+                    "levels": ["700", "850"]
+                  },
+                  {
+                    "id": "ec_34",
+                    "name": "散度",
+
+                    "activeLevel": "200",
+                    "levels": ["200", "500", "700", "850", "925"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tabName": "水汽",
+            "sections": [
+              {
+                "title": "无层次",
+                "items": [
+                  {
+                    "id": "ec_35",
+                    "name": "整层可降水量",
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_35_new_1",
+                    "name": "总云量",
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_35_new_2",
+                    "name": "低云量",
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_36",
+                    "name": "6小时降水量",
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_37",
+                    "name": "6小时对流性降水量",
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_35_new_3",
+                    "name": "EFI_PWAT",
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "高空",
+                "items": [
+                  {
+                    "id": "ec_38",
+                    "name": "比湿",
+
+                    "activeLevel": "850",
+                    "levels": ["850", "925"]
+                  },
+                  {
+                    "id": "ec_39",
+                    "name": "露点",
+
+                    "activeLevel": "700",
+                    "levels": ["700", "850", "925"]
+                  },
+                  {
+                    "id": "ec_40",
+                    "name": "相对湿度",
+
+                    "activeLevel": "500",
+                    "levels": ["500", "700", "850", "925"]
+                  },
+                  {
+                    "id": "ec_41",
+                    "name": "温度露点差",
+
+                    "activeLevel": "500",
+                    "levels": ["500", "700", "850", "925"]
+                  },
+                  {
+                    "id": "ec_42",
+                    "name": "水汽通量散度",
+
+                    "activeLevel": "700",
+                    "levels": ["700", "850"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tabName": "不稳定能量",
+            "sections": [
+              {
+                "title": "能量参数",
+                "items": [
+                  {
+                    "id": "ec_43",
+                    "name": "CAPE",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_44",
+                    "name": "BCAPE",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_45",
+                    "name": "DCAPE",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "稳定度参数",
+                "items": [
+                  {
+                    "id": "ec_46",
+                    "name": "K",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_47",
+                    "name": "BLI",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_48",
+                    "name": "温差850-500",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_49",
+                    "name": "温差700-500",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_50",
+                    "name": "θse700-500",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_51",
+                    "name": "θse850-500",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "复合参数",
+                "items": [
+                  {
+                    "id": "ec_52",
+                    "name": "Cs",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "ec_53",
+                    "name": "Ship",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "高空",
+                "items": [
+                  {
+                    "id": "ec_54",
+                    "name": "温度",
+
+                    "activeLevel": "500",
+                    "levels": ["500", "850", "2M"]
+                  },
+                  {
+                    "id": "ec_55",
+                    "name": "温度平流",
+
+                    "activeLevel": "500",
+                    "levels": ["500", "850"]
+                  },
+                  {
+                    "id": "ec_56",
+                    "name": "θse",
+
+                    "activeLevel": "850",
+                    "levels": ["850"]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "compare",
+        "name": "GRAPES",
+        "typeName": "Grapes",
+        "isStability": false,
+        "activeElementId": "compare_1",
+        "date": "",
+        "hour": "02",
+        "hourList": ["02", "08", "14", "20"],
+        "contents": [
+          {
+            "tabName": "综合图",
+            "sections": [
+              {
+                "title": "会商",
+                "items": [
+                  {
+                    "id": "compare_1",
+                    "name": "通用兼短时强降水",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_2",
+                    "name": "冰雹兼温度层结",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_3",
+                    "name": "大风兼湿度层结",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "通用",
+                "items": [
+                  {
+                    "id": "compare_4",
+                    "name": "500高度、850风场和湿度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_5",
+                    "name": "500高度、925风场、700湿度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_6",
+                    "name": "500高度、700风场、850ΘSE",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_7",
+                    "name": "200风场、500高度、850湿度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_8",
+                    "name": "200散度、500高度、500风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "短时强降水",
+                "items": [
+                  {
+                    "id": "compare_9",
+                    "name": "BLI、PW、925风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_10",
+                    "name": "BLI、PW、850风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_11",
+                    "name": "850风场、PWAT、700垂直速度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_12",
+                    "name": "925风场、CAPE、850比湿",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_13",
+                    "name": "500高度、850风场、水汽通量散度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_14",
+                    "name": "500高度、850风场、925露点",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_15",
+                    "name": "700风场、PWAT、3KM风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "冰雹雷暴大风",
+                "items": [
+                  {
+                    "id": "compare_16",
+                    "name": "500温度、850温度、925风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_17",
+                    "name": "500湿度、850湿度、500风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_18",
+                    "name": "500湿度、CAPE(BLI)、925风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_19",
+                    "name": "500温度平流、CAPE(BLI)、925风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_20",
+                    "name": "500涡度平流、CAPE(BLI)、925风场",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_21",
+                    "name": "500高度、CAPE(BLI)、6Km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_22",
+                    "name": "850风场、CAPE(BLI)、3Km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "冰雹",
+                "items": [
+                  {
+                    "id": "compare_23",
+                    "name": "BLI、H0(0度 层高度)、6km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "雷暴大风",
+                "items": [
+                  {
+                    "id": "compare_24",
+                    "name": "DCAPE、MUCAPE、6km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_25",
+                    "name": "DCAPE、MUCAPE、PW",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tabName": "抬升",
+            "sections": [
+              {
+                "title": "无层次",
+                "items": [
+                  {
+                    "id": "compare_26",
+                    "name": "海平面气压",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_27",
+                    "name": "零度层高度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_28",
+                    "name": "0-1Km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_29",
+                    "name": "0-3Km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_30",
+                    "name": "6Km风切",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_31",
+                    "name": "500hPa涡度",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_32",
+                    "name": "500hPa涡度平流",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "高空",
+                "items": [
+                  {
+                    "id": "compare_33",
+                    "name": "大风速区",
+
+                    "activeLevel": "200",
+                    "levels": ["200", "500", "700", "850", "925"]
+                  },
+                  {
+                    "id": "compare_34",
+                    "name": "垂直速度",
+
+                    "activeLevel": "700",
+                    "levels": ["700", "850"]
+                  },
+                  {
+                    "id": "compare_35",
+                    "name": "散度",
+
+                    "activeLevel": "200",
+                    "levels": ["200", "500", "700", "850", "925"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tabName": "水汽",
+            "sections": [
+              {
+                "title": "无层次",
+                "items": [
+                  {
+                    "id": "compare_36",
+                    "name": "整层可降水量",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_37",
+                    "name": "6小时降水量",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_38",
+                    "name": "6小时对流性降水量",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "高空",
+                "items": [
+                  {
+                    "id": "compare_39",
+                    "name": "比湿",
+
+                    "activeLevel": "850",
+                    "levels": ["850", "925"]
+                  },
+                  {
+                    "id": "compare_40",
+                    "name": "露点",
+
+                    "activeLevel": "700",
+                    "levels": ["700", "850", "925"]
+                  },
+                  {
+                    "id": "compare_41",
+                    "name": "相对湿度",
+
+                    "activeLevel": "500",
+                    "levels": ["500", "700", "850", "925"]
+                  },
+                  {
+                    "id": "compare_42",
+                    "name": "温度露点差",
+
+                    "activeLevel": "500",
+                    "levels": ["500", "700", "850", "925"]
+                  },
+                  {
+                    "id": "compare_43",
+                    "name": "水汽通量散度",
+
+                    "activeLevel": "700",
+                    "levels": ["700", "850"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tabName": "不稳定能量",
+            "sections": [
+              {
+                "title": "能量参数",
+                "items": [
+                  {
+                    "id": "compare_44",
+                    "name": "CAPE",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_45",
+                    "name": "BCAPE",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_46",
+                    "name": "DCAPE",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "稳定度参数",
+                "items": [
+                  {
+                    "id": "compare_47",
+                    "name": "K",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_48",
+                    "name": "BLI",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_49",
+                    "name": "温差850-500",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_50",
+                    "name": "温差700-500",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_51",
+                    "name": "θse700-500",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_52",
+                    "name": "θse850-500",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "复合参数",
+                "items": [
+                  {
+                    "id": "compare_53",
+                    "name": "Cs",
+
+                    "activeLevel": "",
+                    "levels": []
+                  },
+                  {
+                    "id": "compare_54",
+                    "name": "Ship",
+
+                    "activeLevel": "",
+                    "levels": []
+                  }
+                ]
+              },
+              {
+                "title": "高空",
+                "items": [
+                  {
+                    "id": "compare_55",
+                    "name": "温度",
+
+                    "activeLevel": "500",
+                    "levels": ["500", "850", "2M"]
+                  },
+                  {
+                    "id": "compare_56",
+                    "name": "温度平流",
+
+                    "activeLevel": "500",
+                    "levels": ["500", "850"]
+                  },
+                  {
+                    "id": "compare_57",
+                    "name": "θse",
+
+                    "activeLevel": "850",
+                    "levels": ["850"]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gather",
+    "fcstName": "集合预报",
+    "activeTypeName": "ECMWF",
+    "aging": "000",
+    "agingList": [
+      "000",
+      "003",
+      "006",
+      "009",
+      "012",
+      "015",
+      "018",
+      "021",
+      "024",
+      "027",
+      "030",
+      "033",
+      "036",
+      "039",
+      "042"
+    ],
+    "contents": [
+      {
+        "id": "ecmwf",
+        "name": "ECMWF",
+        "typeName": "ECMWF",
+        "activeElementId": "ecmwf_1",
+        "date": "",
+        "hour": "08",
+        "hourList": ["08", "20"],
+        "conditions": [
+          {
+            "cdName": "集合方法",
+            "activeConditionName": "最小数",
+            "items": [
+              {
+                "name": "最小数"
+              },
+              {
+                "name": "一分位"
+              },
+              {
+                "name": "中间数"
+              },
+              {
+                "name": "三分位"
+              },
+              {
+                "name": "最大数"
+              },
+              {
+                "name": "mode"
+              },
+              {
+                "name": "平均数"
+              },
+              {
+                "name": "概率匹配"
+              },
+              {
+                "name": "阈值概率"
+              }
+            ]
+          }
+        ],
+        "elementContents": [
+          {
+            "elementName": "水汽",
+            "sections": [
+              {
+                "sectionName": "地面",
+                "elements": [
+                  {
+                    "id": "ecmwf_1",
+                    "name": "短时强降水概率",
+                    "publishTimeFormat": "",
+                    "activeLevel": "",
+                    "levels": [],
+                    "path": ""
+                  }
+                ]
+              },
+              {
+                "sectionName": "高空",
+                "elements": [
+                  {
+                    "id": "ecmwf_2",
+                    "name": "850hPa相对 湿度",
+                    "publishTimeFormat": "",
+                    "activeLevel": "",
+                    "levels": [],
+                    "path": ""
+                  },
+                  {
+                    "id": "ecmwf_3",
+                    "name": "700hPa相对 湿度",
+                    "publishTimeFormat": "",
+                    "activeLevel": "",
+                    "levels": [],
+                    "path": ""
+                  },
+                  {
+                    "id": "ecmwf_4",
+                    "name": "500hPa相对 湿度",
+                    "publishTimeFormat": "",
+                    "activeLevel": "",
+                    "levels": [],
+                    "path": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elementName": "抬升",
+            "sections": [
+              {
+                "sectionName": "高空",
+                "elements": [
+                  {
+                    "id": "ecmwf_5",
+                    "name": "0-6Km风切",
+                    "publishTimeFormat": "",
+                    "activeLevel": "",
+                    "levels": [],
+                    "path": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elementName": "不稳定能量",
+            "sections": [
+              {
+                "sectionName": "能量参数",
+                "elements": [
+                  {
+                    "id": "ecmwf_6",
+                    "name": "Cape",
+                    "publishTimeFormat": "",
+                    "activeLevel": "",
+                    "levels": [],
+                    "path": ""
+                  }
+                ]
+              },
+              {
+                "sectionName": "稳定度参数",
+                "elements": [
+                  {
+                    "id": "ecmwf_7",
+                    "name": "K指数",
+                    "publishTimeFormat": "",
+                    "activeLevel": "",
+                    "levels": [],
+                    "path": ""
+                  },
+                  {
+                    "id": "ecmwf_8",
+                    "name": "温度递减率850-500",
+                    "publishTimeFormat": "",
+                    "activeLevel": "",
+                    "levels": [],
+                    "path": ""
+                  }
+                ]
+              },
+              {
+                "sectionName": "复合参数",
+                "elements": [
+                  {
+                    "id": "ecmwf_9",
+                    "name": "Cs",
+                    "publishTimeFormat": "",
+                    "activeLevel": "",
+                    "levels": [],
+                    "path": ""
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prob",
+    "fcstName": "概率预报",
+    "activeElementId": "recipe_1",
+    "aging": "000",
+    "agingList": [
+      "000",
+      "003",
+      "006",
+      "009",
+      "012",
+      "015",
+      "018",
+      "021",
+      "024",
+      "027",
+      "030",
+      "033",
+      "036",
+      "039",
+      "042",
+      "045",
+      "048",
+      "051",
+      "054",
+      "057",
+      "060",
+      "063",
+      "066",
+      "069",
+      "072",
+      "078",
+      "084",
+      "090",
+      "096",
+      "102",
+      "108",
+      "114",
+      "120",
+      "126",
+      "132",
+      "138",
+      "144",
+      "150",
+      "156",
+      "162",
+      "168"
+    ],
+    "contents": [
+      {
+        "id": "recipe",
+        "typeName": "配料法(NCEP)",
+        "activeHour": 3,
+        "hourIntervals": [3, 6, 12, 24],
+        "date": "",
+        "hour": "08",
+        "hourList": ["08", "20"],
+        "eleNameSuffix": "",
+        "elements": [
+          {
+            "id": "recipe_1",
+            "name": "雷暴",
+            "activeLevel": "",
+            "levels": []
+          },
+          {
+            "id": "recipe_2",
+            "name": "短时强降水（大于20mm）",
+            "activeLevel": "",
+            "levels": []
+          },
+          {
+            "id": "recipe_3",
+            "name": "短时强降水（大于50mm）",
+            "activeLevel": "",
+            "levels": []
+          },
+          {
+            "id": "recipe_4",
+            "name": "短时强降水（大于80mm）",
+            "activeLevel": "",
+            "levels": []
+          },
+          {
+            "id": "recipe_5",
+            "name": "冰雹",
+            "activeLevel": "",
+            "levels": []
+          },
+          {
+            "id": "recipe_6",
+            "name": "雷暴大风",
+            "activeLevel": "",
+            "levels": []
+          }
+        ]
+      },
+      {
+        "id": "study",
+        "typeName": "机器学习",
+        "activeHour": 6,
+        "hourIntervals": [6, 12, 24],
+        "date": "",
+        "hour": "02",
+        "hourList": ["02", "08", "14", "20"],
+        "eleNameSuffix": "j",
+        "elements": [
+          {
+            "id": "study_1",
+            "name": "雷暴",
+            "activeLevel": "",
+            "levels": []
+          },
+          {
+            "id": "study_2",
+            "name": "冰雹",
+            "activeLevel": "",
+            "levels": []
+          },
+          {
+            "id": "study_3",
+            "name": "降水",
+            "activeLevel": "",
+            "levels": []
+          },
+          {
+            "id": "study_4",
+            "name": "雷暴大风",
+            "activeLevel": "",
+            "levels": []
+          }
+        ]
+      },
+      {
+        "id": "studyRecipe",
+        "typeName": "配料法与机器学习融合",
+        "activeHour": 12,
+        "hourIntervals": [12],
+        "date": "",
+        "hour": "08",
+        "hourList": ["08", "20"],
+        "eleNameSuffix": "ncepmachine",
+        "elements": [
+          {
+            "id": "studyRecipe_1",
+            "name": "雷暴",
+            "activeLevel": "",
+            "levels": []
+          },
+          {
+            "id": "studyRecipe_2",
+            "name": "冰雹",
+            "activeLevel": "",
+            "levels": []
+          },
+          {
+            "id": "studyRecipe_3",
+            "name": "降水",
+            "activeLevel": "",
+            "levels": []
+          },
+          {
+            "id": "studyRecipe_4",
+            "name": "雷暴大风",
+            "activeLevel": "",
+            "levels": []
+          }
+        ]
+      }
+    ]
+  }
+]

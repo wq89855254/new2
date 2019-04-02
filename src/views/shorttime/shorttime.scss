@@ -1,0 +1,354 @@
+$left-width: 360px;
+$content-top: 5px;
+
+.shorttime {
+  // position: relative;
+  height: 100%;
+  padding-left: $left-width + 10px;
+  overflow: hidden;
+
+  .left-content {
+    position: absolute;
+    top: 73px;
+    left: 5px;
+    bottom: 5px;
+    width: $left-width;
+    // padding-top: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 1px 4px rgba(135, 151, 169, 0.4);
+
+    .class-tabs /deep/ {
+      .ant-tabs-tab {
+        margin: 0;
+        padding: 12px 16px 8px;
+        color: #797d84;
+        font-size: 13px;
+        font-family: Arial, "Microsoft YaHei", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      }
+      .ant-tabs-nav .ant-tabs-tab-active {
+        color: #003980;
+      }
+    }
+
+    .fcst {
+      padding: 10px 5px 0;
+    }
+    .type-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      .wd-switch /deep/ {
+        .ant-checkbox-wrapper {
+          color: #5c6065;
+          font-size: 12px;
+          font-family: Arial, "Microsoft YaHei", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+      }
+    }
+    .list-section-title {
+      color: #fff;
+      text-shadow: 0.5px 0.866px 5px rgba(3, 34, 128, 0.7);
+      background: url(../../assets/images/section-title.jpg) no-repeat;
+      padding-left: 18px;
+    }
+
+    .element-list {
+      margin: 0;
+      padding: 5px 0;
+      .name {
+        font-size: 13px;
+        color: #1a1a1a;
+        line-height:23px;
+        font-family: "Microsoft YaHei", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      }
+    }
+
+    .gather-radio-item {
+      margin-top: 10px;
+    }
+    .gather-radio {
+      margin-top: 10px;
+      overflow: hidden;
+      .name {
+        font-size: 13px;
+        color: #1a1a1a;
+        line-height:23px;
+        font-family: "Microsoft YaHei", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      }
+      > li {
+        width: 33.33333%;
+        float: left;
+      }
+    }
+
+    .prob-hour-list {
+      padding-top: 10px;
+      span {
+        display: inline-block;
+        padding-right: 5px;
+      }
+    }
+  }
+  .right-content {
+    position: relative;
+    height: 100%;
+    margin: 5px 5px 0 0;
+
+    .top-control {
+      position: absolute;
+      left:60px;
+      right: 0;
+      top: 0;
+      height: 60px;
+      // background: #ccc;
+      display: flex;
+      align-items: flex-start;
+      > * {
+        margin-left: 10px;
+      }
+      > *:first-child {
+        margin-left: 0;
+      }
+      .whole-aging-select {
+        flex: 1;
+      }
+    }
+  }
+
+  .img-content {
+    position: absolute;
+
+    left: 60px;
+    right: 0;
+    top: 65px;
+    bottom: 10px;
+    background-color: #fff;
+
+    border-radius: 4px;
+    box-shadow: 0.5px 0.866px 4px 0px rgba(122, 157, 197, 0.5);
+
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+.imgDie{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 10px;
+  right: 0;
+  z-index: 5;
+  display: none;
+  &>img{
+    width: 100%;
+    height: 100%;
+  }
+}
+.die_active{
+  display:block;
+}
+.right_side{
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 1000;
+  border-radius: 3px;
+  border: 1px solid #b9b9b9;
+  background: #f8f9f9;
+  box-shadow: 0.5px 0.866px 5px 0px rgb( 0, 55, 112 );
+  // width: 
+  &>div{
+    // width: 100%;
+    height: 43px;
+    width: 32px;
+    background: #fff;
+    & span{
+        font-size: 12px;
+        color: #3780dd;
+        display: block;
+        text-align: center;
+    }
+    & i{
+        display: block;
+        width: 18px;
+        height: 18px;
+        margin: 0 auto;
+        // margin-bottom: 2px;
+        margin-top: 6px;
+        // background: url('../../assets/images/menus/warning.png') no-repeat 0px top;
+    }
+  }
+  &>div:nth-child(1){
+    border-top: 3px solid #2d7cdc;
+  }
+  &>div:nth-child(1) i{
+    background: url('../../assets/images/menus/situation.png') no-repeat 0px top;
+  }
+  &>div:nth-child(2) i{
+    background: url('../../assets/images/menus/forecast.png') no-repeat 0px top;
+  }
+  &>div i:hover{
+    background-position: -20px top;
+  }
+  &>div .active{
+      background-position: -40px  top !important;
+  }
+}
+.icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.sideBar_box{
+  width: 270px;
+  box-sizing: border-box;
+  border: 1px soild #b9b9b9;
+  position: absolute;
+  left: 53px;
+  bottom: 14px;
+  box-shadow: 0.5px 0.866px 4px 0px rgb( 0, 55, 112 ); 
+  background: #fff;
+  padding: 10px;
+  z-index: 555;
+  &:after{
+      content: "";
+      position:absolute;
+      width: 0;
+      height: 0;
+      border-width: 5px ;
+      border-color: transparent #fff transparent transparent;
+      border-style: solid;
+      left: -10px;
+      top: 46%;
+  }
+}
+.top{
+  display: flex;
+  align-items: center;
+}
+.bottom{
+  display: flex;
+  & span{
+      height: 100%;
+      width: 100px;
+  }
+}
+.zoom{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #000000a5;
+  z-index: 55555;
+  display: none;
+  & img{
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  .close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color:#fff;
+  }
+  .left{
+    display: block;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 10px;
+    opacity: .7;
+    top: 50%;
+    margin-top: -60px;
+    background: url('../../assets/images/dirBtn/left.png') no-repeat center;
+    background-size: 100% 100%;
+  }
+  .right{
+    display: block;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    opacity: 0.7;
+    margin-top: -60px;
+    translate: all .3s;
+    background: url('../../assets/images/dirBtn/right.png') no-repeat center;
+    background-size: 100% 100%;
+  }
+  .left:hover , .right:hover{
+    opacity: 1;
+    transform: scale(1.1)
+  }
+}
+.zoom_active{
+  display: block;
+}
+.selects{
+  width:55px;
+  // height: 100%;
+  position: absolute;
+  left:0px;
+  top: 0;
+  bottom: 10px;
+  display: flex;box-sizing: border-box;
+  flex-direction: column;
+  & .select_list{
+    
+    background: #fff;
+    flex: 1;
+    border-radius: 3px;
+    padding: 25px 0px 8px 5px;
+    box-sizing: border-box;
+    position: relative;
+    p{
+      // margin: 0 0 10px 0;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      color: #fff;
+      text-align: center;
+      left: 0;
+      border-radius: 4px 4px 0 0 ;
+      background: -webkit-gradient(linear, left top, left  bottom, color-stop(0%, #99cbff), to(#3080d4));
+    }
+    &:nth-of-type(2){
+      margin-top: 5px;
+    }
+    ul{
+      margin: 0;
+    }
+    ul>li:hover{
+      background: #f0f5fd;
+      border: 1px solid #e0e7ee;
+    }
+    ul>li{
+      width: 31px;
+      height: 24px;
+      border-radius: 3px;
+      text-align: center;
+      color: #4a4a4a;
+      box-sizing: border-box;
+      margin-bottom: 2px;
+      line-height: 22px;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .active{
+      background: #5c92e2 !important;
+      border: 1px solid #3b8fe4 !important;
+      color: #fff !important;
+    }
+  }
+}

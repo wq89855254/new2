@@ -1,0 +1,6 @@
+.map-nav {
+    height: 300px;
+    background-color: #99ccff;
+    margin-top: 10px;
+}
+

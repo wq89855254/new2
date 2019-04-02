@@ -1,0 +1,219 @@
+.layer-manage {
+  z-index: 9999;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  padding: 10px 12px;
+  width: 408px;
+  border-radius: 4px;
+  background-color: #f7fbff;
+  border: 1px solid #629ff2;
+  transition: all 0.3s;
+  &.fold {
+    right: -413px;
+  }
+}
+
+.header {
+  display: flex;
+  height: 30px;
+  margin-bottom: 10px;
+  .tabs {
+    height: 100%;
+    display: flex;
+    flex: 1;
+    height: 100%;
+    border-bottom: 1px solid #c9c9c9;
+    margin: 0;
+    color: #8e8e8e;
+    font-size: 15px;
+    > li {
+      position: relative;
+      left: 0;
+      bottom: -1px;
+      height: 100%;
+      margin-right: 20px;
+      line-height: 28px;
+      border-bottom: 1px solid transparent;
+      cursor: pointer;
+      // transition: all .3s;
+      &.active {
+        border-color: #1e52db;
+        color: #1e52db;
+        font-weight: 600;
+      }
+    }
+  }
+  .clear-btn,
+  .fold-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    background-color: #e9f0f4;
+    cursor: pointer;
+  }
+  .clear-btn {
+    margin: 0 10px;
+    background: url(../../../assets/images/synthesis/icon-delete.png) no-repeat;
+    &:hover {
+      background-position-x: -26px;
+    }
+  }
+  .fold-btn {
+    background: url(../../../assets/images/synthesis/icon-fold.png) no-repeat;
+    &:hover {
+      background-position-x: -26px;
+    }
+  }
+}
+.content {
+  display: block;
+  width: 100%;
+  max-height: 410px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  > ul {
+    width: 100%;
+    max-height: 410px;
+    margin-bottom: 0;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 5px 0 5px 5px;
+  border-radius: 4px;
+  border: 1px solid #c9d1d6;
+  margin-bottom: 6px;
+  margin-right: 5px;
+  background-color: #fff;
+  .close {
+    width: 18px;
+    height: 18px;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../../../assets/images/synthesis/icon-close.png) no-repeat;
+    cursor: pointer;
+    &:hover {
+      background-position-x: -18px;
+    }
+  }
+  .info {
+    flex: 1;
+  }
+  .control {
+    display: flex;
+    align-items: center;
+    .title {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      color: #404040;
+      > span {
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url(../../../assets/images/synthesis/icon-show.png)
+          no-repeat;
+        margin-right: 5px;
+        cursor: pointer;
+        &.hide {
+          background-position-x: -20px;
+        }
+      }
+    }
+    .time {
+      padding: 0 10px;
+    }
+    .btns {
+      display: flex;
+      align-items: center;
+      .left-btn,
+      .right-btn {
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .left-btn {
+        margin-right: 5px;
+        background: url(../../../assets/images/synthesis/icon-left.png)
+          no-repeat;
+        &:hover {
+          background-position-x: -20px;
+        }
+      }
+      .right-btn {
+        background: url(../../../assets/images/synthesis/icon-right.png)
+          no-repeat;
+        &:hover {
+          background-position-x: -20px;
+        }
+      }
+    }
+  }
+  .legend {
+    margin-bottom: 0;
+    margin-top: 5px;
+    overflow: hidden;
+    > li {
+      float: left;
+      width: 10%;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      background-color: #ccc;
+    }
+    > li:nth-child(odd) {
+      background-color: #eee;
+    }
+  }
+}
+
+.spread-btn {
+  position: absolute;
+  left: -60px;
+  bottom: 0;
+  width: 49px;
+  height: 41px;
+  background: url(../../../assets/images/synthesis/icon-layer-manage.png)
+    no-repeat;
+  cursor: pointer;
+  &:hover {
+    background-position-x: -49px;
+  }
+}
+
+.fade-enter-active {
+  animation: fade-in 0.5s;
+}
+.fade-leave-active {
+  animation: fade-in 0.1s 0.3s reverse;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.null-layer {
+  padding: 10px;
+  text-align: center;
+}
+
+
+.legend-img {
+  padding-top: 5px;
+  >img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,91 @@
+.content{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.69);
+    z-index: 5555;
+}
+.login_box{
+    width: 382px;
+    height: 310px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -191px;
+    margin-top: -155px;
+    background-color: #fff;
+    background-image: url('../../../assets/images/login_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    border-radius: 8px;
+    & .userName{
+        // margin-top: 90px;
+        width: 345px;
+        height: 45px;
+        margin: 90px auto 20px;
+        display: flex;
+        border-radius: 5px;
+        & i{
+            width: 50px;
+            height: 45px;
+            background-color: #08f;
+            background-image: url('../../../assets/images/login_user.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        & input{
+            border: none;
+            outline: none;
+            height: 100%;
+            width: 295px;
+            background: #f1f2f7;
+            text-indent: 10px;
+        }
+    }
+    & .passWord{
+        // margin-top: 90px;
+        width: 345px;
+        height: 45px;
+        margin: 0 auto 25px;
+        display: flex;
+        border-radius: 5px;
+        & i{
+            width: 50px;
+            height: 45px;
+            background-color: #08f;
+            background-image: url('../../../assets/images/login_pass.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        & input{
+            border: none;
+            outline: none;
+            height: 100%;
+            width: 295px;
+            background: #f1f2f7;
+            text-indent: 10px;
+        }
+    }
+    & .btn{
+        width: 345px;
+        height: 45px;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        & button{
+            width: 160px;
+            height: 45px;
+            border:none;
+            background: #dcdcdc;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+        }
+        & button:nth-child(1){
+            background: #0088ff;
+        }
+    }
+}

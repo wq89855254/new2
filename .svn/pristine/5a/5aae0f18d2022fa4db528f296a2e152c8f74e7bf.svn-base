@@ -1,0 +1,18 @@
+[
+    {
+        "id": "shortTime",
+        "typeName": "短时"
+    },
+    {
+        "id": "near",
+        "typeName": "临近"
+    },
+    {
+        "id": "sounding",
+        "typeName": "探空"
+    },
+    {
+        "id": "fcst",
+        "typeName": "客观预报"
+    }
+]

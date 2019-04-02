@@ -1,0 +1,716 @@
+[
+    {
+        "id": "FenXiDiMian",
+        "fcstName": "地面",
+        "activeTypeName": "NCEP",
+        "aging": "000",
+        "agingList": [
+            "000",
+            "003",
+            "006",
+            "009",
+            "012",
+            "015",
+            "018",
+            "021",
+            "024",
+            "027",
+            "030",
+            "033",
+            "036",
+            "039",
+            "042",
+            "045",
+            "048",
+            "051",
+            "054",
+            "057",
+            "060",
+            "063",
+            "066",
+            "069",
+            "072",
+            "078",
+            "084",
+            "090",
+            "096",
+            "102",
+            "108",
+            "114",
+            "120",
+            "126",
+            "132",
+            "138",
+            "144",
+            "150",
+            "156",
+            "162",
+            "168"
+          ],
+        "contents": [
+            {
+                "id": "FenXiDiMian",
+                "name": "NCEP",
+                "typeName": "NCEP",
+                "isStability": false,
+                "activeElementId": "ncep_1",
+                "date": "",
+                "minuteList":[],
+                "hour": "02",
+                "hourList": [
+                    "02",
+                    "05",
+                    "08","11","14","17",
+                    "20",
+                    "23"
+                ],
+                "contents": [
+                    {
+                        "tabName": "综合图",
+                        "sections": [
+
+                            {
+                                "title": "站点",
+                                "items": [
+                                    {
+                                        "id": "ncep_15",
+                                        "name": "站点海平面气压",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_16",
+                                        "name": "站点三小时变压",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_17",
+                                        "name": "站点比湿",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_18",
+                                        "name": "站点6小时降水",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_19",
+                                        "name": "站点24小时降水",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_20",
+                                        "name": "站点相对湿度",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_21",
+                                        "name": "站点温度",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_22",
+                                        "name": "站点露点",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_23",
+                                        "name": "站点位温",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_24",
+                                        "name": "站点假相当位温",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_25",
+                                        "name": "站点能见度",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "格点",
+                                "items": [
+                                    {
+                                        "id": "ncep_1",
+                                        "name": "海平面气压",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_2",
+                                        "name": "三小时变压",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_3",
+                                        "name": "比湿",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_4",
+                                        "name": "6小时降水",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_5",
+                                        "name": "24小时降水",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_6",
+                                        "name": "相对湿度",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_7",
+                                        "name": "风速",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_8",
+                                        "name": "温度",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_9",
+                                        "name": "温度露点差",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_10",
+                                        "name": "露点",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_11",
+                                        "name": "位温",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_12",
+                                        "name": "假相当位温",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_13",
+                                        "name": "风U",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_14",
+                                        "name": "风V",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "FenXiGaokong",
+        "fcstName": "高空",
+        "activeTypeName": "NCEP",
+        "aging": "000",
+        "agingList": [
+            "000",
+            "003",
+            "006",
+            "009",
+            "012",
+            "015",
+            "018",
+            "021",
+            "024",
+            "027",
+            "030",
+            "033",
+            "036",
+            "039",
+            "042",
+            "045",
+            "048",
+            "051",
+            "054",
+            "057",
+            "060",
+            "063",
+            "066",
+            "069",
+            "072",
+            "078",
+            "084",
+            "090",
+            "096",
+            "102",
+            "108",
+            "114",
+            "120",
+            "126",
+            "132",
+            "138",
+            "144",
+            "150",
+            "156",
+            "162",
+            "168"
+          ],
+        "contents": [
+            {
+                "id": "FenXiGaokong",
+                "name": "NCEP",
+                "typeName": "NCEP",
+                "isStability": false,
+                "activeElementId": "ncep_1",
+                "date": "",
+                "hour": "02",
+                "glevelList":["100","150","200","250","300","400","500","700","850","925","1000"],
+                "glevel":"850",
+                "gSwitch":false,
+                "sSwitch":false,
+                "slevelList":["350","340","330","320","310","300","290","280"],
+                "slevel":"300",
+                "hourList": [
+                    "02",
+                    "05",
+                    "08","11","14","17",
+                    "20",
+                    "23"
+                ],
+                "contents": [
+                    {
+                        "tabName": "综合图",
+                        "sections": [
+                            {
+                                "title": "无层次",
+                                "items": [
+                                    {
+                                        "id": "ncep_1",
+                                        "name": "500hPa减700hPa温度平流",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_2",
+                                        "name": "500hPa减850hPa温度平流",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_3",
+                                        "name": "500hPa减700hPa涡度平流",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_4",
+                                        "name": "500hPa减850hPa涡度平流",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_5",
+                                        "name": "500hPa减700hPa假相当位温",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_6",
+                                        "name": "500hPa减850hPa假相当位温",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "等高面",
+                                "items": [
+                                    {
+                                        "id": "ncep_15",
+                                        "name": "温度平流",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_16",
+                                        "name": "涡度平流",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_17",
+                                        "name": "散度",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_18",
+                                        "name": "水汽通量散度",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_19",
+                                        "name": "水汽通量大小",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_20",
+                                        "name": "水汽通量U",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_21",
+                                        "name": "水汽通量V",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_22",
+                                        "name": "位势高度",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_23",
+                                        "name": "湿位涡",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_24",
+                                        "name": "湿位涡项1",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_25",
+                                        "name": "湿位涡项2",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_7",
+                                        "name": "垂直速度",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_8",
+                                        "name": "位涡",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_9",
+                                        "name": "比湿",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_10",
+                                        "name": "相对湿度",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_11",
+                                        "name": "全风速",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_12",
+                                        "name": "温度",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_13",
+                                        "name": "露点温度",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_14",
+                                        "name": "露点温度差",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_26",
+                                        "name": "位温",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_27",
+                                        "name": "相当位温",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_28",
+                                        "name": "风场U",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_29",
+                                        "name": "风场V",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_30",
+                                        "name": "垂直速度W",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_31",
+                                        "name": "相对涡度",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "等熵面",
+                                "items": [
+                                    {
+                                        "id": "ncep_32",
+                                        "name": "等熵面U",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_33",
+                                        "name": "等熵面V",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_34",
+                                        "name": "等熵面气压",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_35",
+                                        "name": "等熵面位涡",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "FenXiZiDongZhan",
+        "fcstName": "自动站",
+        "activeTypeName": "NCEP",
+        "aging": "000",
+        "agingList": [
+            "000",
+            "003",
+            "006",
+            "009",
+            "012",
+            "015",
+            "018",
+            "021",
+            "024",
+            "027",
+            "030",
+            "033",
+            "036",
+            "039",
+            "042",
+            "045",
+            "048",
+            "051",
+            "054",
+            "057",
+            "060",
+            "063",
+            "066",
+            "069",
+            "072",
+            "078",
+            "084",
+            "090",
+            "096",
+            "102",
+            "108",
+            "114",
+            "120",
+            "126",
+            "132",
+            "138",
+            "144",
+            "150",
+            "156",
+            "162",
+            "168"
+          ],
+        "contents": [
+            {
+                "id": "FenXiZiDongZhan",
+                "name": "NCEP",
+                "typeName": "NCEP",
+                "isStability": false,
+                "activeElementId": "ncep_1",
+                "date": "",
+                "hour": "02",
+                "hourList": [
+                    "02",
+                    "08",
+                    "14",
+                    "20"
+                ],
+                "contents": [
+                    {
+                        "tabName": "综合图",
+                        "sections": [
+                            {
+                                "title": "非站点",
+                                "items": [
+                                    {
+                                        "id": "ncep_1",
+                                        "name": "海平面气压",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_3",
+                                        "name": "比湿",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_8",
+                                        "name": "温度",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_10",
+                                        "name": "露点",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_11",
+                                        "name": "位温",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_12",
+                                        "name": "假相当位温",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_13",
+                                        "name": "风U",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_14",
+                                        "name": "风V",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "站点",
+                                "items": [
+                                    {
+                                        "id": "ncep_15",
+                                        "name": "站点海平面气压",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_17",
+                                        "name": "站点比湿",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_20",
+                                        "name": "站点相对湿度",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_21",
+                                        "name": "站点温度",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_22",
+                                        "name": "站点露点",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_23",
+                                        "name": "站点位温",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    },
+                                    {
+                                        "id": "ncep_24",
+                                        "name": "站点假相当位温",
+                                        "activeLevel": "",
+                                        "levels": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
