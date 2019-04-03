@@ -13,46 +13,29 @@
     <div class="center_wrap">
         <!-- 手风琴 -->
         <div class="accordion">
-            <!-- <div v-for="(item,index) in headerData" :key=index>
-                <h2 @click="isOpen(index,item)">
-                    {{item.name}}
-                    
-                    <img :src="true?'./imgs/zhedie.png':'./imgs/open.png'" alt="">
-
-                </h2>
-                <transition name="draw">
-                    <ul class="year_list"  v-show="item.show"> 
-                        
-                        <li  v-for="(list,index) in item.list" :key=index>
-                            <span class="isChildOPen(item,index)">+</span>
-                            {{list}}
-                        </li>
-                    </ul>
-                </transition>
-            </div> -->
-           
-
-            <a-tree
-                showLine
-                :defaultExpandedKeys="['0-0-0']"
-                @select="onSelect"
-            >
-                <a-tree-node key="0-0">
-                <span slot="title" style="color: #1890ff">parent 1</span>
-                <a-tree-node title="parent 1-0" key="0-0-0">
-                    <a-tree-node title="leaf" key="0-0-0-0" />
-                    <a-tree-node title="leaf" key="0-0-0-1" />
-                    <a-tree-node title="leaf" key="0-0-0-2" />
-                </a-tree-node>
-                <a-tree-node title="parent 1-1" key="0-0-1">
-                    <a-tree-node title="leaf" key="0-0-1-0" />
-                </a-tree-node>
-                <a-tree-node title="parent 1-2" key="0-0-2">
-                    <a-tree-node title="leaf" key="0-0-2-0" />
-                    <a-tree-node title="leaf" key="0-0-2-1" />
-                </a-tree-node>
-                </a-tree-node>
-            </a-tree>
+            <a-collapse accordion v-model="activeKey" >
+                <a-collapse-panel v-for="(header,index) in headerData" :header="header.name" :key="index+''" style="background:linear-gradient(to bottom,#ebf4fd,#cae0fb,#cadffe);color:#585d63;font-weight:bold;">
+                    <a-tree
+                        showLine
+                        :defaultExpandedKeys="['0-0-0']"
+                    >
+                        <a-tree-node v-for="(list,index) in header.list" :key="index">
+                            <span slot="title" style="color: #1890ff">{{list}}</span>
+                            
+                            <a-tree-node title="强对流监测月报-2004-监测最终版" key="0-0-0"></a-tree-node>
+                            <a-tree-node title="强对流监测月报-2004-监测最终版" key="0-0-1"></a-tree-node>
+                            <a-tree-node title="强对流监测月报-2004-监测最终版" key="0-0-2"></a-tree-node>
+                            <a-tree-node title="强对流监测月报-2004-监测最终版" key="0-0-3"></a-tree-node>
+                            <a-tree-node title="强对流监测月报-2004-监测最终版" key="0-0-4"></a-tree-node>
+                            <a-tree-node title="强对流监测月报-2004-监测最终版" key="0-0-5"></a-tree-node>
+                            
+                            
+                        </a-tree-node>
+                    </a-tree>
+                </a-collapse-panel>
+                
+            </a-collapse>
+            
         </div>
         <!-- pdf -->
         <div class="pdf_show">

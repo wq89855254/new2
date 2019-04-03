@@ -25,32 +25,12 @@
         .accordion
             border: 1px solid #9dc8f3
             width 407px
-            // /*指定过渡样式*/
-            // .xxx-enter-active, .xxx-leave-active {
-            //     transition: opacity   0.3s;
-            // }
-            // /*指定隐藏时的样式*/
-            // .xxx-enter, .xxx-leave-to {
-            //     height opacity 
-            // }
-
-            // .move-enter-active {
-            // transition: all 0.1s
-            // }
-            // /*指定隐藏过渡样式*/
-            // .move-leave-active {
-            // transition: all 0.1s
-            // }
-            // /*指定隐藏时的样式*/
-            // .move-enter{
-            //     opacity: 0;
-            //     height: 0
-            // }
-            // .move-leave-to {
-            //     opacity: 0;
-                
-            // }
- 
+            height: 100%
+            border-radius: 5px
+            :global(.ant-collapse-content)
+                height 493px
+                font-weight: normal
+                overflow: auto
             &>div
                 // min-height 33px
                 line-height 33px

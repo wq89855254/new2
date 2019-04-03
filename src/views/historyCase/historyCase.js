@@ -77,7 +77,7 @@ const columns = [{
   ]
   // 树节点信息
   const treeData = [
-    {
+    [{
       title: '实况',
       key: '实况',
       children: [{
@@ -103,68 +103,45 @@ const columns = [{
           key: '雷达特征量',
         }]
       }],
-    },
-    {
-      title: '实况',
-      key: '实况',
+    }],[{
+      title: '实况2',
+      key: '实况2',
       children: [{
-        title: '强天气',
-        key: '实况-强天气',
-      }, {
-        title: '云图',
-        key: '实况-云图',
-      }, {
-        title: '自动站',
-        key: '实况-自动站',
-      }, {
-        title: '雷达拼图',
-        key: '实况-雷达拼图',
-        children:[{
-          title: 'PUP拼图',
-          key: 'PUP拼图',
-        },{
-          title: 'SWAN拼图',
-          key: 'SWAN拼图',
-        },{
-          title: '雷达特征量',
-          key: '雷达特征量',
-        }]
-      }],
-    },
-    {
-      title: '实况',
-      key: '实况',
+        title: '强天气2',
+        key: '实况2-强天气2',
+      }]
+    }],[{
+      title: '实况3',
+      key: '实况3',
       children: [{
-        title: '强天气',
-        key: '实况-强天气',
-      }, {
-        title: '云图',
-        key: '实况-云图',
-      }, {
-        title: '自动站',
-        key: '实况-自动站',
-      }, {
-        title: '雷达拼图',
-        key: '实况-雷达拼图',
-        children:[{
-          title: 'PUP拼图',
-          key: 'PUP拼图',
-        },{
-          title: 'SWAN拼图',
-          key: 'SWAN拼图',
-        },{
-          title: '雷达特征量',
-          key: '雷达特征量',
-        }]
-      }],
-    }
+        title: '强天气3',
+        key: '实况3-强天气3',
+      }]
+    }],[{
+      title: '实况4',
+      key: '实况4',
+      children: [{
+        title: '强天气2',
+        key: '实况4-强天气2',
+      }]
+    }],[{
+      title: '实况5',
+      key: '实况5',
+      children: [{
+        title: '强天气2',
+        key: '实况5-强天气2',
+      }]
+    }]
+    
+    
+  
 ]
 
 import checkImg from './imgs/check.png'
 import emptBlockImg from './imgs/emptBlock.png'
 
 const weatherTypeOptions = ['冰雹','大风','雾霾','强降水','雷暴大风']
-const weatherSystemOptions = ['1','2','3']
+const weatherSystemOptions = ['高气压','低气压','高压脊','低压槽','气旋','反气旋','切变线','雷暴','热带云团','冷槽','暖脊','龙卷','飑线']
 
 export default{
     data() {
@@ -172,7 +149,6 @@ export default{
           //img
           checkImg,
           emptBlockImg,
-
 
           isCheckShow:false,
           isConfirmShow:false,
@@ -190,11 +166,18 @@ export default{
           isExpand:false,
           isChecked:false,
 
+          // 自动展开父节点
+          autoExpandParent:true,
+          expandedKeys:['实况-雷达拼图'],
+          cKeys:[10,20],
+
           //全选
           weatherTypeOptions,
           weatherSystemOptions,
+
           typeCheckedList:[],
           systemCheckedList:[],
+
           isCheckAllType:false,
           isCheckAllSystem:false,
           indeterminateType:false,
@@ -209,23 +192,15 @@ export default{
       confirmProduct(){
         this.isCheckShow = false
       },
-      onExpand(){
-        console.log(1)
-      },
-      checkAllType(){
-        this.isCheckAllType = !this.isCheckAllType
-      },
-      checkAllSystem(){
-        tihs.isCheckAllSystem = !this.isCheckAllSystem
-      },
-
+      
+    
       onTypeChange(typeCheckedList){
         this.indeterminateType = !!typeCheckedList.length && (typeCheckedList.length < weatherTypeOptions.length)
-        this.checkAllType = typeCheckedList.length === weatherTypeOptions.length
+        this.isCheckAllType = typeCheckedList.length === weatherTypeOptions.length
       },
       onSystemChange(systemCheckedList){
         this.indeterminateSys = !!systemCheckedList.length && (systemCheckedList.length < weatherSystemOptions.length)
-        this.checkAllSystem = systemCheckedList.length === weatherSystemOptions.length
+        this.isCheckAllSystem = systemCheckedList.length === weatherSystemOptions.length
       },
       onCheckAllChange (e) {
         Object.assign(this, {
@@ -240,8 +215,18 @@ export default{
         })
       },
       
+      //树形控件
+     
+      onExpand(expandedKeys,info){
+        console.log('onExpand', expandedKeys)
+        this.expandedKeys = expandedKeys
+        this.autoExpandParent = false
+      },
+      onCheck(checkedKeys){
+        this.cKeys.push(checkedKeys)
+        console.log(...this.cKeys)
 
-
+      },
 
 
       check(info){
@@ -263,6 +248,12 @@ export default{
       }
       
 
-    }
+    },
+
+    // watch:{
+    //   checkedKeys(){
+    //     console.log(this.checkedKeys)
+    //   }
+    // }
     
 }

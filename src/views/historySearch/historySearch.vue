@@ -56,20 +56,20 @@
                             <img src="./imgs/a2.png" alt="">
                         </h2>
                         <ul class="weatherType_list">
-                            <li class="active">
-                                <input type="checkbox">冰雹
-                            </li>
-                            <li class="active">
-                                <input type="checkbox">大风
+                            <li @change="cg">
+                                <a-checkbox value='冰雹'>冰雹</a-checkbox>   
                             </li>
                             <li>
-                                <input type="checkbox">雾霾
+                                <a-checkbox value='大风'>大风</a-checkbox>   
                             </li>
                             <li>
-                                <input type="checkbox">强降水
+                                <a-checkbox value='雾霾'>雾霾</a-checkbox>   
                             </li>
                             <li>
-                                <input type="checkbox">雷暴大风
+                                <a-checkbox value='强降水'>强降水</a-checkbox>   
+                            </li>
+                            <li>
+                                <a-checkbox value='雷暴大风'>雷暴大风</a-checkbox>   
                             </li>
                         </ul>
                     </div>
@@ -85,40 +85,14 @@
                     <div class="region_check">
                         <h2 class="w_title">
                             <img src="./imgs/a4.png" alt=""> 
-                            <input type="checkbox"><span class="checkall">全选</span>
+                            <a-checkbox
+                                @change="onCheckAllChange"
+                                :checked="checkAll"
+                            >全选
+                            </a-checkbox>
                         </h2>
                         <ul class="region_list">
-                            <li>
-                                <img src="./imgs/nocheck.png" alt="">全国
-                            </li>
-                            <li>
-                                <img src="./imgs/nocheck.png" alt="">华北
-                            </li>
-                            <li>
-                                <img src="./imgs/nocheck.png" alt="">东北
-                            </li>
-                            <li>
-                                <img src="./imgs/nocheck.png" alt="">华东
-                            </li>
-                            <li>
-                                <img src="./imgs/nocheck.png" alt="">华南
-                            </li>
-                            <li>
-                                <img src="./imgs/nocheck.png" alt="">西南
-                            </li>
-                            <li>
-                                <img src="./imgs/nocheck.png" alt="">西北
-                            </li>
-                            <li>
-                                <img src="./imgs/nocheck.png" alt="">青藏
-                            </li>
-                            <li>
-                                <img src="./imgs/nocheck.png" alt="">新疆
-                            </li>
-                            <li>
-                                <img src="./imgs/nocheck.png" alt="">近海
-                            </li>
-                            
+                            <a-checkbox-group :options="plainOptions" v-model="checkedList" @change="onChange" />
                         </ul>
                     </div>
                     <!-- 查询 -->
@@ -363,11 +337,8 @@
         </div>
     </div>
 </template>
-<script>
-export default {
-    
+<script src='./historySearch.js'>
 
-}
 </script>
 <style src="./historySearch.styl" lang="stylus" scoped></style>
 
