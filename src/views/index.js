@@ -12,6 +12,7 @@ import HistorySearch from "./historySearch/historySearch.vue"
 import Recover from "./recover/recover.vue"
 import FilesManage from './filesManage/filesManage.vue'
 import DutyRoster from './dutyRoster/dutyRoster.vue'
+import Search from './search/search.vue'
 
 
-export { Home, Synthesis, Monitor, Diagnosis, Shorttime, Shortimpending, Verify, Archive, Manage, HistoryCase, HistorySearch, Recover, FilesManage, DutyRoster }
+export { Home, Synthesis, Monitor, Diagnosis, Shorttime, Shortimpending, Verify, Archive, Manage, HistoryCase, HistorySearch, Recover, FilesManage, DutyRoster, Search}

@@ -75,20 +75,17 @@
 
             <div class="title">请选择产品类型</div>
             <ul class="productList">
-                <li v-for="(tree,index) in (treeData)" :key="index">
-                    <a-tree
+                <li v-for="(tree,index) in treeData" :key="index">
+                    <a-tree 
                         checkable
-                       
-
                         @expand="onExpand"
                         :expandedKeys=expandedKeys
                         :autoExpandParent=treeData.children
-
-                        @check="onCheck"
                         :treeData="tree"
-
                     />
                 </li>
+                 
+
             </ul>
             <div class="btn_group">
                 <span class="confirm" @click="confirmProduct">确定</span>

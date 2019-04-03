@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import { NotFound } from "./components/base";
-import { Home, Synthesis, Monitor, Diagnosis, Shorttime, Shortimpending, Verify, Archive, Manage, HistoryCase, HistorySearch, Recover, FilesManage ,DutyRoster} from './views';
+import { Home, Synthesis, Monitor, Diagnosis, Shorttime, Shortimpending, Verify, Archive, Manage, HistoryCase, HistorySearch, Recover, FilesManage ,DutyRoster, Search} from './views';
 
 Vue.use(Router);
 
@@ -80,6 +80,11 @@ export default new Router({
           path: "/manage/dutyRoster",
           name: "DutyRoster",
           component: DutyRoster,
+        },
+        {
+          path:'/search',
+          name: "Search",
+          component: Search,
         },
         {
           path: "*",

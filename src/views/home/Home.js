@@ -45,6 +45,11 @@ export default {
           name: '管理',
           path: '/manage',
           id: 'manage'
+        },
+        {
+          name:'查询',
+          path:'/search',
+          id:'search'
         }
       ]
     }

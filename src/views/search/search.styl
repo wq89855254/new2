@@ -1,0 +1,63 @@
+.container
+    width 100%
+    height 100% 
+    .center_wrap
+        display flex
+        .search
+            width 466px
+            height 745px
+            border 1px solid #a5c1d7
+            background #fff
+            .search_title
+                text-align: center
+                height 50px
+                line-height 50px
+                color 384a92
+                font-weight: bold
+                font-size 18px
+            .img_wrap
+                height 50px
+                line-height: 50px
+                color #283e87
+                font-size 16px
+            &>div
+                position relative
+                padding 0 20px
+                &::before
+                    position: absolute
+                    left 18px
+                    top 9px
+                    content: ''
+                    width: 90%
+                    height 1px
+                    background #f4f4f4
+            .search_date
+                &>div
+                    display inline-block
+                    :global(input)
+                        width 125px
+                        height 25px
+                        margin-left 10px
+                    &.begin_date
+                        margin-right 20px
+            .search_btn
+                display block
+                width 100px
+                height 30px
+                text-align center
+                margin 0 auto
+                line-height: 30px
+                color #fff
+                border-radius 20px
+                background linear-gradient(to bottom,#62b0fa 10%,#3691ec)
+        .result
+            width 1080px
+            height 745px
+            border 1px solid #a5c1d7
+            background #fff
+            .result_title
+                text-align: center
+                height 70px
+                line-height: 70px
+                color #2d3695
+                font-size 18px

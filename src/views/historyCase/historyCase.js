@@ -103,35 +103,38 @@ const columns = [{
           key: '雷达特征量',
         }]
       }],
-    }],[{
-      title: '实况2',
-      key: '实况2',
-      children: [{
-        title: '强天气2',
-        key: '实况2-强天气2',
-      }]
-    }],[{
-      title: '实况3',
-      key: '实况3',
-      children: [{
-        title: '强天气3',
-        key: '实况3-强天气3',
-      }]
-    }],[{
-      title: '实况4',
-      key: '实况4',
-      children: [{
-        title: '强天气2',
-        key: '实况4-强天气2',
-      }]
-    }],[{
-      title: '实况5',
-      key: '实况5',
-      children: [{
-        title: '强天气2',
-        key: '实况5-强天气2',
-      }]
-    }]
+    }],
+    
+    [
+      {
+        title: '实况2',
+        key: '实况2',
+        children: [{
+          title: '强天气2',
+          key: '实况2-强天气2',
+        }, {
+          title: '云图2',
+          key: '实况2-云图2',
+        }, {
+          title: '自动站2',
+          key: '实况2-自动站2',
+        }, {
+          title: '雷达拼图2',
+          key: '实况2-雷达拼图2',
+          children:[{
+            title: 'PUP拼图2',
+            key: 'PUP拼图2',
+          },{
+            title: 'SWAN拼图2',
+            key: 'SWAN拼图2',
+          },{
+            title: '雷达特征量2',
+            key: '雷达特征量2',
+          }]
+        }],
+      }
+    ]
+    
     
     
   
@@ -168,8 +171,8 @@ export default{
 
           // 自动展开父节点
           autoExpandParent:true,
-          expandedKeys:['实况-雷达拼图'],
-          cKeys:[10,20],
+          expandedKeys:['实况','实况2'],
+          checkedKeys:[],
 
           //全选
           weatherTypeOptions,
@@ -191,6 +194,7 @@ export default{
       },
       confirmProduct(){
         this.isCheckShow = false
+        console.log(this.checkedKeys)
       },
       
     
@@ -220,14 +224,27 @@ export default{
       onExpand(expandedKeys,info){
         console.log('onExpand', expandedKeys)
         this.expandedKeys = expandedKeys
-        this.autoExpandParent = false
+        // this.autoExpandParent = false
       },
-      onCheck(checkedKeys){
-        this.cKeys.push(checkedKeys)
-        console.log(...this.cKeys)
+      
+      // onCheck(keys){
+      //   // this.keys = [...keys]
+      //   if(keys.length){
+      //     if(this.checkedKeys.indexOf(...keys)===-1){
+      //       this.checkedKeys.push(...keys)
 
-      },
+      //     }
+      //   }else{
+      //     console.log(keys.length)
+      //     console.log(this.checkedKeys.indexOf(this.keys))
+      //     // if(this.checkedKeys.find(...keys)){
+      //     //   this.checkedKeys.pop(keys.length)
+      //     // }
+      //   }
+      //   console.log('keys---',[...keys])
 
+      //   console.log('checkedKeys---',this.checkedKeys)
+      // },
 
       check(info){
         if(info.children){
@@ -250,10 +267,10 @@ export default{
 
     },
 
-    // watch:{
-    //   checkedKeys(){
-    //     console.log(this.checkedKeys)
-    //   }
-    // }
+    watch:{
+      checkedKeys(val){
+        console.log(val)
+      }
+    }
     
 }
