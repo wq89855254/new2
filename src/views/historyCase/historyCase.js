@@ -107,31 +107,168 @@ const columns = [{
     
     [
       {
-        title: '实况2',
-        key: '实况2',
+        title: '监测',
+        key: '监测',
         children: [{
-          title: '强天气2',
-          key: '实况2-强天气2',
+          title: '强天气',
+          key: '监测-强天气',
         }, {
-          title: '云图2',
-          key: '实况2-云图2',
+          title: '自动站',
+          key: '监测-自动站',
         }, {
-          title: '自动站2',
-          key: '实况2-自动站2',
+          title: '闪电',
+          key: '监测-闪电',
         }, {
-          title: '雷达拼图2',
-          key: '实况2-雷达拼图2',
+          title: '卫星',
+          key: '监测-卫星',
           children:[{
-            title: 'PUP拼图2',
-            key: 'PUP拼图2',
+            title: '时间累积次数',
+            key: '监测-卫星-时间累积次数',
           },{
-            title: 'SWAN拼图2',
-            key: 'SWAN拼图2',
-          },{
-            title: '雷达特征量2',
-            key: '雷达特征量2',
+            title: '逐小时或30分',
+            key: '监测-卫星-逐小时或30分',
           }]
+        },{
+          title: '雷达',
+          key: '监测-雷达',
+        }, {
+          title: '风廓线',
+          key: '监测-风廓线',
         }],
+      }
+    ],
+    [
+      {
+        title: '诊断',
+        key: '诊断',
+        children:[{
+          title: '地面',
+          key: '诊断-地面',
+        },{
+          title: '高空',
+          key: '诊断-高空',
+        },{
+          title: '自动站',
+          key: '诊断-自动站',
+          children:[
+            {
+              title: '非站点',
+              key: '诊断-自动站-非站点',
+            },
+            {
+              title: '站点',
+              key: '诊断-自动站-站点',
+            }
+          ]
+        }]
+      }
+    ],
+    [
+      {
+        title: '短临',
+        key: '短临',
+        children:[{
+          title: '短时',
+          key: '短临-短时',
+        },{
+          title: '临近',
+          key: '短临-临近',
+        },{
+          title: '探空',
+          key: '短临-探空',
+        },{
+          title: '客观预报',
+          key: '短临-客观预报',
+          children:[
+            {
+              title: '客观预报',
+              key: '短临-客观预报-客观预报',
+            },
+            {
+              title: '多模式集成',
+              key: '短临-客观预报-多模式集成',
+            }
+          ]
+        }]
+      }
+    ],
+    [
+      {
+        title: '短期',
+        key: '短期',
+        children:[
+          {
+            title: '多模式预报',
+            key: '短期-多模式预报',
+            children:[
+              {
+                title: 'NCEP',
+                key: '短期-多模式预报-NCEP',
+                children:[
+                  {
+                    title: '综合图',
+                    key: '短期-多模式预报-NCEP-综合图',
+                    children:[
+                      {
+                        title: '会商',
+                        key: '短期-多模式预报-NCEP-综合图-会商',
+                      },
+                      {
+                        title: '通用',
+                        key: '短期-多模式预报-NCEP-综合图-通用',
+                      },
+                      {
+                        title: '短时强降水',
+                        key: '短期-多模式预报-NCEP-综合图-短时强降水',
+                      },
+                      {
+                        title: '冰雹雷暴大风',
+                        key: '短期-多模式预报-NCEP-综合图-冰雹雷暴大风',
+                      },
+                      {
+                        title: '冰雹',
+                        key: '短期-多模式预报-NCEP-综合图-冰雹',
+                      },
+                      {
+                        title: '雷暴大风',
+                        key: '短期-多模式预报-NCEP-综合图-雷暴大风',
+                      }
+                    ]
+                  },
+                  {
+                    title: '抬升',
+                    key: '短期-多模式预报-NCEP-抬升',
+                  },
+                  {
+                    title: '水汽',
+                    key: '短期-多模式预报-NCEP-水汽',
+                  },
+                  {
+                    title: '不稳定能量',
+                    key: '短期-多模式预报-NCEP-不稳定能量',
+                  }
+                ]
+              },
+              { 
+                title: 'EC',
+                key: '短期-多模式预报-EC',
+              },
+              {
+                title: 'grapes_GFS',
+                key: '短期-多模式预报-grapes_GFS',
+              },
+              
+            ]
+          },
+          {
+            title: '集合预报',
+            key: '短期-集合预报',
+          },{
+            title: '概率预报',
+            key: '短期-概率预报',
+          }
+        ]
+      
       }
     ]
     
@@ -147,6 +284,13 @@ const weatherTypeOptions = ['冰雹','大风','雾霾','强降水','雷暴大风
 const weatherSystemOptions = ['高气压','低气压','高压脊','低压槽','气旋','反气旋','切变线','雷暴','热带云团','冷槽','暖脊','龙卷','飑线']
 
 export default{
+    mounted(){
+      this.$nextTick(()=>{
+        const testNode = document.querySelector('.ant-tree li span.ant-tree-checkbox')
+        console.log(testNode)
+      })
+      
+    },
     data() {
         return {
           //img
@@ -170,9 +314,9 @@ export default{
           isChecked:false,
 
           // 自动展开父节点
-          autoExpandParent:true,
-          expandedKeys:['实况','实况2'],
-          checkedKeys:[],
+          checkedKeys:[[],[],[],[],[]],
+          
+
 
           //全选
           weatherTypeOptions,
@@ -221,30 +365,8 @@ export default{
       
       //树形控件
      
-      onExpand(expandedKeys,info){
-        console.log('onExpand', expandedKeys)
-        this.expandedKeys = expandedKeys
-        // this.autoExpandParent = false
-      },
       
-      // onCheck(keys){
-      //   // this.keys = [...keys]
-      //   if(keys.length){
-      //     if(this.checkedKeys.indexOf(...keys)===-1){
-      //       this.checkedKeys.push(...keys)
-
-      //     }
-      //   }else{
-      //     console.log(keys.length)
-      //     console.log(this.checkedKeys.indexOf(this.keys))
-      //     // if(this.checkedKeys.find(...keys)){
-      //     //   this.checkedKeys.pop(keys.length)
-      //     // }
-      //   }
-      //   console.log('keys---',[...keys])
-
-      //   console.log('checkedKeys---',this.checkedKeys)
-      // },
+      
 
       check(info){
         if(info.children){
@@ -269,7 +391,8 @@ export default{
 
     watch:{
       checkedKeys(val){
-        console.log(val)
+        console.log(Array.prototype.concat.apply([], val))
+
       }
     }
     

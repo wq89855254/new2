@@ -78,10 +78,10 @@
                 <li v-for="(tree,index) in treeData" :key="index">
                     <a-tree 
                         checkable
-                        @expand="onExpand"
-                        :expandedKeys=expandedKeys
-                        :autoExpandParent=treeData.children
+                        expand
+                        :defaultExpandedKeys="['实况','监测','诊断','短临','短期']"
                         :treeData="tree"
+                        v-model="checkedKeys[index]"
                     />
                 </li>
                  

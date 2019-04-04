@@ -18,16 +18,28 @@
             </div>
         </div>
         <div class="dutyInfo">
-            
+            <!-- <a-table :columns="columns" :dataSource=tableData 
+                bordered 
+                :pagination=false
+            >
+                
+            </a-table> -->
+
+            <a-table :columns="columns" :dataSource=tableData 
+                bordered 
+                :pagination=false
+            >
+                
+            </a-table>
+
+
         </div>
     </div>
 </template>
 
 
-<script>
-export default {
-    
-}
+<script src='./dutyRoster.js'>
+
 </script>
 
 <style src="./dutyRoster.styl" lang="stylus" scoped>

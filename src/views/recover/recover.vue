@@ -11,7 +11,7 @@
             </div>
         </div>
 
-        <div class="center_wrap">
+        <div class="centerWrap">
             <!-- 数据恢复 -->
             <div class="date_recover">
                 <div class="date_choose">
