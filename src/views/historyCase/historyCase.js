@@ -1,4 +1,4 @@
-// 表头信息
+// 历史存档表头信息
 const columns = [{
     title: '序列',
     dataIndex: 'num',
@@ -15,8 +15,9 @@ const columns = [{
     key: 'endDate',
   }, {
     title: '产品类型',
-    key: 'peoductType',
-    dataIndex: 'peoductType',
+    key: 'tags',
+    dataIndex: 'tags',
+    slots: { title: 'tags' },
     scopedSlots: { customRender: 'tags' },
   }, {
     title: '天气类型',
@@ -40,13 +41,14 @@ const columns = [{
     scopedSlots: { customRender: 'action' },
   }]
   
-  
-  const historyData = [{
+// 历史存档表格内容信息
+const historyData = [{
     key: '1',
     num: '1',
     beginDate: '2019-01-15 14:00',
     endDate: '2019-01-18 14:00',
-    peoductType: '查看类型',
+    
+    tags:['查看详情1'],
     weatherType: '冰雹/大风/强降水',
     weatherSystem:'高气压/高压脊/气旋/切变线',
     explain:'无',
@@ -57,7 +59,7 @@ const columns = [{
     num: '2',
     beginDate: '2019-01-15 14:00',
     endDate: '2019-01-18 14:00',
-    peoductType: '查看类型',
+    tags: ['查看详情2'],
     weatherType: '冰雹/大风/强降水',
     weatherSystem:'高气压/高压脊/气旋/切变线',
     explain:'无',
@@ -68,15 +70,15 @@ const columns = [{
     num: '3',
     beginDate: '2019-01-15 14:00',
     endDate: '2019-01-18 14:00',
-    peoductType: '查看类型',
+    tags: ['查看详情'],
     weatherType: '冰雹/大风/强降水',
     weatherSystem:'高气压/高压脊/气旋/切变线',
     explain:'无',
     saveDate:'2019-01-18 14:00'
   },
   ]
-  // 树节点信息
-  const treeData = [
+  // 产品类型树节点信息
+const treeData = [
     [{
       title: '实况',
       key: '实况',
@@ -94,13 +96,13 @@ const columns = [{
         key: '实况-雷达拼图',
         children:[{
           title: 'PUP拼图',
-          key: 'PUP拼图',
+          key: '实况-雷达拼图-PUP拼图',
         },{
           title: 'SWAN拼图',
-          key: 'SWAN拼图',
+          key: '实况-雷达拼图-SWAN拼图',
         },{
           title: '雷达特征量',
-          key: '雷达特征量',
+          key: '实况-雷达拼图-雷达特征量',
         }]
       }],
     }],
@@ -277,26 +279,15 @@ const columns = [{
   
 ]
 
-import checkImg from './imgs/check.png'
-import emptBlockImg from './imgs/emptBlock.png'
-
+// 天气类型
 const weatherTypeOptions = ['冰雹','大风','雾霾','强降水','雷暴大风']
+// 天气系统
 const weatherSystemOptions = ['高气压','低气压','高压脊','低压槽','气旋','反气旋','切变线','雷暴','热带云团','冷槽','暖脊','龙卷','飑线']
 
 export default{
-    mounted(){
-      this.$nextTick(()=>{
-        const testNode = document.querySelector('.ant-tree li span.ant-tree-checkbox')
-        console.log(testNode)
-      })
-      
-    },
+    
     data() {
         return {
-          //img
-          checkImg,
-          emptBlockImg,
-
           isCheckShow:false,
           isConfirmShow:false,
           columns,
@@ -311,14 +302,12 @@ export default{
           // 树节点信息
           treeData,
           isExpand:false,
-          isChecked:false,
-
-          // 自动展开父节点
-          checkedKeys:[[],[],[],[],[]],
+          disabled:false,
+          checkedKeys:[['实况-强天气'],['监测-强天气'],[],[],[]],
           
 
 
-          //全选
+          //天气类型/系统全选
           weatherTypeOptions,
           weatherSystemOptions,
 
@@ -328,63 +317,80 @@ export default{
           isCheckAllType:false,
           isCheckAllSystem:false,
           indeterminateType:false,
-          indeterminateSys:false
-
+          indeterminateSys:false,
+          
+          // 是否点击确定
+          isConfirm:false
         }
       },
     methods:{
+      ccc(a){
+        console.log(11,a)
+      },
+      // 产品类型显示隐藏
       isCheckProduct(isCheckShow){
         this.isCheckShow = isCheckShow
+        this.isConfirm = false
+        this.disabled = false
       },
+      // 点击确定
       confirmProduct(){
-        this.isCheckShow = false
-        console.log(this.checkedKeys)
+        // this.isCheckShow = false
+        this.isConfirm = true
+        this.disabled = true
+        
+       
       },
+      //
       
-    
+      // 天气类型多选变化
       onTypeChange(typeCheckedList){
         this.indeterminateType = !!typeCheckedList.length && (typeCheckedList.length < weatherTypeOptions.length)
         this.isCheckAllType = typeCheckedList.length === weatherTypeOptions.length
       },
+      // 天气系统多选变化
       onSystemChange(systemCheckedList){
         this.indeterminateSys = !!systemCheckedList.length && (systemCheckedList.length < weatherSystemOptions.length)
         this.isCheckAllSystem = systemCheckedList.length === weatherSystemOptions.length
       },
+      // 天气类型全选
       onCheckAllChange (e) {
         Object.assign(this, {
           typeCheckedList: e.target.checked ? weatherTypeOptions : [],
           isCheckAllType: e.target.checked,
         })
       },
+      // 天气系统全选
       onCheckAllChangeSys (e) {
         Object.assign(this, {
           systemCheckedList: e.target.checked ? weatherSystemOptions : [],
           isCheckAllSystem: e.target.checked,
         })
       },
-      
-      //树形控件
-     
-      
+
+      // 表格详情点击
+      handelClick(e){
+        console.log(e.target.innerHTML)
+      },
       
 
-      check(info){
-        if(info.children){
-          check(info.children)
+      // check(info){
+      //   if(info.children){
+      //     check(info.children)
          
-        }else{
+      //   }else{
 
-          if(typeof info.checked === 'undefined'){
+      //     if(typeof info.checked === 'undefined'){
         
-            this.$set(info,'checked',true)
-          }else{
-            info.checked = !info.checked
-          }
+      //       this.$set(info,'checked',true)
+      //     }else{
+      //       info.checked = !info.checked
+      //     }
           
-        }
+      //   }
         
         
-      }
+      // }
       
 
     },

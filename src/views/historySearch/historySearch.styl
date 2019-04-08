@@ -134,6 +134,7 @@
                             border-radius 8px
                             color #1958b5
                             padding-left 15px  
+                            cursor pointer
                     // 选择地区    
                     .region_check
                         .w_title
@@ -219,10 +220,20 @@
                                     padding-left 67px
 
                         tbody
+                            position relative
                             display block
                             height 66px
                             border 1px solid #e1e1e1
                             margin-top 6px
+                            &::after
+                                position absolute
+                                top 0
+                                left 0
+                                content:''
+                                display inline-block
+                                width 100%
+                                height 100%
+                                background rgba(0,0,0,0)
                             &.active
                                 border-radius: 2px;
                                 background-image:linear-gradient( 90deg, rgb(79,114,205) 0%, rgb(68,105,191) 20%, rgb(56,96,177) 50%, rgb(72,107,188) 85%, rgb(87,118,199) 100%);
@@ -232,8 +243,6 @@
                                         .num
                                             background-color: rgb( 71, 116, 213 );
                                             color #fff
-
-
 
                             td
                                 display table-cell
@@ -254,12 +263,21 @@
                                         border-radius 50%
                                         background-color: rgb( 215, 234, 255 )
             .product_show
+                position relative
                 float left
-                .map_show
-                    img
-                        width 100%
+                width 1088px
+                .pre,.next
+                    position absolute
+                    top 50%
+                    transform translateY(-50%)
+                    cursor: pointer
+                .pre
+                    left 20px
+                .next
+                    right 20px
+                &>img
+                    width 100%
         .shade
-            display:none
             position absolute
             top 0
             left 0
@@ -270,13 +288,12 @@
 
 
         .checkProduct
-            display none
-            position fixed
-            top 66px
-            left 25%
-            z-index 5
-           
+            position absolute
+            top 50%
+            left 50%
+            transform: translate(-50%,-50%)
             
+            z-index 5
             // width 1290px
             // width auto 
             padding 10px 15px 0

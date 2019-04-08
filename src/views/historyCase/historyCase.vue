@@ -59,11 +59,59 @@
             <div class="tb">
                 <a-table
                     class="table"
-                    :columns="columns"
                     :dataSource="historyData"
                     :pagination="pagination"
                     :loading="loading"
-                />
+                >
+                    <a-table-column 
+                        title="序列"
+                        dataIndex="num"
+                        key="num"
+                    />
+                       
+                    <a-table-column
+                        title="开始时间"
+                        dataIndex="beginDate"
+                        key="beginDate"
+                    />
+                    <a-table-column
+                        title="结束时间"
+                        dataIndex="endDate"
+                        key="endDate"
+                    />
+                    <a-table-column
+                        title="产品类型"
+                        dataIndex="tags"
+                        key="peoductType"
+                        
+                    >
+                        <template slot-scope="tags">
+                            <span>
+                                <a-tag @click="handelClick" v-for="tag in tags" color="blue" :key="tag">{{tag}}</a-tag>
+                            </span>
+                        </template>
+                    </a-table-column>
+                    <a-table-column
+                        title="天气类型"
+                        dataIndex="weatherType"
+                        key="weatherType"
+                    />
+                    <a-table-column
+                        title="天气系统"
+                        dataIndex="weatherSystem"
+                        key="weatherSystem"
+                    />
+                   <a-table-column
+                        title="说明"
+                        dataIndex="explain"
+                        key="explain"
+                    />
+                   <a-table-column
+                        title="保存时间"
+                        dataIndex="saveDate"
+                        key="saveDate"
+                    />
+                </a-table>
             </div>
             
         </div>
@@ -75,15 +123,18 @@
 
             <div class="title">请选择产品类型</div>
             <ul class="productList">
-                <li v-for="(tree,index) in treeData" :key="index">
+                <li :class="{confirm:isConfirm}" v-for="(tree,index) in treeData" :key="index">
                     <a-tree 
                         checkable
                         expand
+                        :disabled='disabled'
+                        @check='ccc'
                         :defaultExpandedKeys="['实况','监测','诊断','短临','短期']"
                         :treeData="tree"
                         v-model="checkedKeys[index]"
                     />
                 </li>
+               
                  
 
             </ul>

@@ -81,6 +81,14 @@
                             color #7f807b
                             input
                                 vertical-align middle
+                        :global(.ant-checkbox-group-item)
+                            padding 3px 10px
+                            border: 1px solid rgb( 203, 220, 241 );
+                            border-radius: 3px;
+                            margin-right 12px
+                            color #7f7f7f
+                            background-image:linear-gradient(#eff5fc ,#dce8f7 15%, #dce8f7 100%);
+ 
                 .weatherSystem
                     display flex
                     .systemList
@@ -103,9 +111,16 @@
                             &:last-child
                                 border none
                                 background:#f7f7f7
-                                
+                    :global(.ant-checkbox-group-item)
+                        padding 3px 5px
+                        border: 1px solid rgb( 203, 220, 241 );
+                        border-radius: 3px;
+                        margin-right 10px
+                        color #7f7f7f
+                        background-image:linear-gradient(#eff5fc ,#dce8f7 15%, #dce8f7 100%);
 
                 .explain
+                    margin-top 10px
                     input 
                         width 60%
                         height 39px
@@ -219,6 +234,23 @@
                 display flex
                 color #303030
                 font-size 14px
+                .confirm
+                    :global(.ant-tree-checkbox-checked .ant-tree-checkbox-inner)
+                        // visibility: visible
+                        display block
+                        background #01b52e
+                        border 1px solid #009927
+                    :global(.ant-tree-checkbox .ant-tree-checkbox-checked)
+                        &~:global(.ant-tree li .ant-tree-node-content-wrapper)
+                            margin-left: 0
+                    :global(.ant-tree-checkbox-inner)
+                        // visibility hidden
+                        display none
+                    :global(.ant-tree li .ant-tree-node-content-wrapper)
+                        margin-left: 8px
+                    :global(.ant-tree-checkbox-indeterminate .ant-tree-checkbox-inner)
+                        ::after
+                            background #01b52e
                 li
                     min-width 220px
                     padding 16px 20px 0 8px

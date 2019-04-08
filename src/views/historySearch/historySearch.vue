@@ -11,8 +11,7 @@
                     <li class="selected">已选:短期-多模式-NCEP-会商</li>
                 </ul>
                  <ul class="date_list">
-                    <li>1小时</li>
-                    <li>5分钟</li>
+                    
                     <li class="area">
                         区域
                         <select name="" id="">
@@ -35,17 +34,13 @@
                         <div class="date_group">
                             <div class="begintime">
                                 <label for="">开始时间</label>
-                                <a-date-picker size='small'/>
-                                <!-- <select name="" id="">
-                                    <option value="">16</option>
-                                </select> -->
+                                <a-date-picker  @change="onBeginDate" size='small'/>
+                               
                             </div>
                             <div class="endtime">
                                 <label for="">结束时间</label>
-                                <a-date-picker size='small'/>
-                                <!-- <select name="" id="">
-                                    <option value="">18</option>
-                                </select> -->
+                                <a-date-picker  @change="onEndDate" size='small'/>
+                                
                             </div>
                         
                         </div>
@@ -56,21 +51,7 @@
                             <img src="./imgs/a2.png" alt="">
                         </h2>
                         <ul class="weatherType_list">
-                            <li @change="cg">
-                                <a-checkbox value='冰雹'>冰雹</a-checkbox>   
-                            </li>
-                            <li>
-                                <a-checkbox value='大风'>大风</a-checkbox>   
-                            </li>
-                            <li>
-                                <a-checkbox value='雾霾'>雾霾</a-checkbox>   
-                            </li>
-                            <li>
-                                <a-checkbox value='强降水'>强降水</a-checkbox>   
-                            </li>
-                            <li>
-                                <a-checkbox value='雷暴大风'>雷暴大风</a-checkbox>   
-                            </li>
+                           <a-checkbox-group :options="plainOptionsType" v-model="typeCheckedList" @change="onTypeChange" />
                         </ul>
                     </div>
                     <!-- 天气系统 -->
@@ -78,7 +59,7 @@
                         <h2 class="w_title">
                             <img src="./imgs/a3.png" alt="">
                         </h2>
-                        <div class="check">点击选择</div>
+                        <div class="check" @click="onCheckSystem">点击选择</div>
                         
                     </div>
                     <!-- 选择地区 -->
@@ -92,11 +73,11 @@
                             </a-checkbox>
                         </h2>
                         <ul class="region_list">
-                            <a-checkbox-group :options="plainOptions" v-model="checkedList" @change="onChange" />
+                            <a-checkbox-group :options="plainOptions" v-model="checkedList" @change="onAreaChange" />
                         </ul>
                     </div>
                     <!-- 查询 -->
-                    <div class="seach_info"> <img src="" alt=""> 查询</div>
+                    <div class="seach_info" @click="onSearch"> <img src="./imgs/search.png" alt=""> 查询</div>
                 </div>
 
                 <!-- 查询结果 -->
@@ -115,9 +96,11 @@
                                 <th class="explain_head">说明</th>
                              </tr>
                         </thead>
-                         <tbody >
+                         <tbody v-for="(tbody,index) in tData" :key="index"
+                                :class="{active:index+1==selected}"
+                                @click.self ="onCheckTbody(tbody,tData)">
                             <tr>
-                                <td class="center" rowspan="2" align='center'><span class="num">1</span></td>
+                                <td class="center" rowspan="2" align='center'><span class="num">{{index+1}}</span></td>
                                 <td class="beginDate">2018-12-30 14:00</td>
                                 <td class="weatherType">冰雹</td>
                                 <td class="explain" rowspan="2">全国范围</td>
@@ -127,60 +110,33 @@
                                 <td class="weatherSystem">高气压/高压脊/气旋/切边线</td>
                             </tr>
                         </tbody>
-                         <tbody >
-                            <tr>
-                                <td class="center" rowspan="2" align='center'><span class="num">2</span></td>
-                                <td class="beginDate">2018-12-30 14:00</td>
-                                <td class="weatherType">冰雹</td>
-                                <td class="explain" rowspan="2">全国范围</td>
-                            </tr>
-                            <tr>
-                                <td class="endDate">2019-01-18 14:00</td>
-                                <td class="weatherSystem">高气压/高压脊/气旋/切边线</td>
-                            </tr>
-                        </tbody>
-                        <tbody class="active">
-                            <tr>
-                                <td class="center" rowspan="2" align='center'><span class="num">3</span></td>
-                                <td class="beginDate">2018-12-30 14:00</td>
-                                <td class="weatherType">冰雹</td>
-                                <td class="explain" rowspan="2">全国范围</td>
-                            </tr>
-                            <tr>
-                                <td class="endDate">2019-01-18 14:00</td>
-                                <td class="weatherSystem">高气压/高压脊/气旋/切边线</td>
-                            </tr>
-                        </tbody>
-                        <tbody class="active">
-                            <tr>
-                                <td class="center" rowspan="2" align='center'><span class="num">3</span></td>
-                                <td class="beginDate">2018-12-30 14:00</td>
-                                <td class="weatherType">冰雹</td>
-                                <td class="explain" rowspan="2">全国范围</td>
-                            </tr>
-                            <tr>
-                                <td class="endDate">2019-01-18 14:00</td>
-                                <td class="weatherSystem">高气压/高压脊/气旋/切边线</td>
-                            </tr>
-                        </tbody>
-                        </table> 
+                         
+                    </table> 
                 </div>
             </div>
             <!-- 地图展示 -->
             <div class="product_show">
-                <div class="product_title"></div>
-                <div class="map_show">
-                    <img src="./imgs/map1.png" alt="">
+                <div class="pre" @click="onChangeMap('pre')">
+                    <img src="./imgs/prev.png" alt="">
                 </div>
+                <img v-for="(img,index) in showImgs" 
+                    :src="img.url" alt="" 
+                    :key="index"
+                    v-show="img.id==selected"
+                    >
+                <div class="next" @click="onChangeMap('next')">
+                    <img src="./imgs/next.png" alt="">
+                </div>
+
             </div>
 
         </div>
         
 
         <!-- 遮罩 -->
-        <div class="shade"></div>
+        <div v-if="isShowSystem" class="shade"></div>
         <!-- 选择图片 -->
-        <div class="checkProduct">
+        <div v-if="isShowSystem" class="checkProduct">
 
             <ul class="productList">
                 <li>
@@ -328,10 +284,10 @@
 
             </ul>
             <div class="btn_group">
-                <span class="confirm">确定</span>
-                <span class="cancel">取消</span>
+                <span class="confirm" @click="onConfirm">确定</span>
+                <span class="cancel" @click="onCancel">取消</span>
             </div>
-            <div class="close">
+            <div class="close" @click="onCancel">
                 <img src="./imgs/close.png" alt="">
             </div>
         </div>
