@@ -7,7 +7,7 @@
             <div class="right_title">
                 <ul class="product_list">
                     <li>产品类型</li>
-                    <li class="filt"><span> <img src="./imgs/filt.png" alt=""> 筛选</span></li>
+                    <li class="filt" @click="onCheckSystem"><span> <img src="./imgs/filt.png" alt="" > 筛选</span></li>
                     <li class="selected">已选:短期-多模式-NCEP-会商</li>
                 </ul>
                  <ul class="date_list">
@@ -16,6 +16,16 @@
                         区域
                         <select name="" id="">
                             <option value="">全国</option>
+                            <option value="">华北</option>
+                            <option value="">东北</option>
+                            <option value="">华东</option>
+                            <option value="">华南</option>
+                            <option value="">西南</option>
+                            <option value="">西北</option>
+                            <option value="">青藏</option>
+                            <option value="">新疆</option>
+                            <option value="">近海</option>
+
                         </select>
                     </li>
                 </ul>
@@ -58,8 +68,16 @@
                     <div class="weather_system">
                         <h2 class="w_title">
                             <img src="./imgs/a3.png" alt="">
+                            <a-checkbox
+                                @change="onCheckAllChangeSys"
+                                :checked="isCheckAllSystem"
+                                > 全选
+                            </a-checkbox>
                         </h2>
-                        <div class="check" @click="onCheckSystem">点击选择</div>
+                        <div class="systemList">
+                            <a-checkbox-group :options='weatherSystemOptions' v-model="systemCheckedList" @change="onSystemChange"/>
+                            
+                        </div>
                         
                     </div>
                     <!-- 选择地区 -->
@@ -141,98 +159,27 @@
             <ul class="productList">
                 <li>
                     <h2 class="title">请从下列已存档产品中选择</h2>
+                    <!-- <div class="level_cont" v-for="(tree,index) in treeData" :key="index">
+                        <a-tree 
+                            expand
+                            :defaultExpandedKeys="['实况','监测','诊断','短临','短期']"
+                            :treeData="tree"
+                        />
+                    </div> -->
                     <div class="level_cont">
-                        <!-- 一级 -->
-                        <div class="first_level">
-                            <img src="./imgs/jian.png" alt=""> <span class='product_type'>诊断</span>
-                            <!-- 二级 -->
-                            <div class="second_level">
-                                <div  class="three_level">
-                                    <img src="./imgs/jian.png" alt=""><span class='product_type'>高空</span>
-                                    <!-- 三级 -->
-                                    <div>
-                                        <img src="./imgs/jian.png" alt=""><span class='product_type'>无层次</span><img src="./imgs/circle_blank.png" alt="">
-                                    </div>
-                                    <div>
-                                        <img src="./imgs/jian.png" alt=""><span class='product_type'>等高面</span><img src="./imgs/circle_active.png" alt="">
-                                    </div>
-                                    <div>
-                                        <img src="./imgs/jian.png" alt=""><span class='product_type'>等熵面</span><img src="./imgs/circle_blank.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="three_level">
-                                    <img src="./imgs/jian.png" alt="" ><span class='product_type'>自动站</span>
-                                    <!-- 三级 -->
-                                    <div>
-                                        <img src="./imgs/jian.png" alt="" ><span class='product_type'>站点</span><img src="./imgs/circle_blank.png" alt="">
-                                    </div>
-                                    <div>
-                                        <img src="./imgs/jian.png" alt="" ><span class='product_type'>非站点</span><img src="./imgs/circle_blank.png" alt="">
-                                    </div>
-                                    
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="level_cont">
-                        <!-- 一级 -->
-                        <div class="first_level">
-                            <img src="./imgs/jian.png" alt=""> <span class='product_type'>短临</span>
-                            <!-- 二级 -->
-                            <div class="second_level">
-                                <div  class="three_level">
-                                    <img src="./imgs/jian.png" alt=""><span class='product_type'>客观预报</span>
-                                    <!-- 三级 -->
-                                    <div>
-                                        <img src="./imgs/jian.png" alt=""><span class='product_type'>客观预报</span><img src="./imgs/circle_blank.png" alt="">
-                                    </div>
-                                    <div>
-                                        <img src="./imgs/jian.png" alt=""><span class='product_type'>多模式集成</span><img src="./imgs/circle_blank.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="level_cont">
-                        <!-- 一级 -->
-                        <div class="first_level">
-                            <img src="./imgs/jian.png" alt=""> <span class='product_type'>短期</span>
-                            <!-- 二级 -->
-                            <div class="second_level">
-                                <div  class="three_level">
-                                    <img src="./imgs/jian.png" alt=""><span class='product_type'>多模式预报</span>
-                                    <!-- 三级 -->
-                                    <div class="four_level">
-                                        <img src="./imgs/jian.png" alt=""><span class='product_type'>NCEP</span>
-                                        <!-- 四级 -->
-                                        <div class="five_level">
-                                            <img src="./imgs/jian.png" alt=""><span class='product_type'>综合图</span>
-                                            <!-- 五级 -->
-                                            <div>
-                                                <img src="./imgs/jian.png" alt=""><span class='product_type'>会商</span><img src="./imgs/circle_blank.png" alt="">
-
-                                            </div>
-                                            <div>
-                                                <img src="./imgs/jian.png" alt=""><span class='product_type'>通用</span><img src="./imgs/circle_blank.png" alt="">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                         <a-tree 
+                            expand
+                            :defaultExpandedKeys="['实况','监测','诊断','短临','短期']"
+                            :treeData="treeData"
+                            
+                        />
                     
+                    </div>
                    
                 </li>
-                <li class="jiantou">
+                <!-- <p class="jiantou">
                     <img src="./imgs/jiantou.png" alt="">
-                </li>
+                </p>
                 <li class="child_choose">
                     <h2 class="title">选择子类</h2>
                     <ul>   
@@ -259,9 +206,9 @@
 
                     </ul>
                 </li>
-                <li class="jiantou">
+                <p class="jiantou">
                     <img src="./imgs/jiantou.png" alt="">
-                </li>
+                </p>
                 <li class="picture_choose">
                     <h2 class="title">图片列表</h2>
                     <ul>
@@ -280,7 +227,7 @@
                         <li>2019032208.png</li>
 
                     </ul>
-                </li>
+                </li> -->
 
             </ul>
             <div class="btn_group">

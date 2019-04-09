@@ -48,7 +48,7 @@ const historyData = [{
     beginDate: '2019-01-15 14:00',
     endDate: '2019-01-18 14:00',
     
-    tags:['查看详情1'],
+    tags:['查看详情'],
     weatherType: '冰雹/大风/强降水',
     weatherSystem:'高气压/高压脊/气旋/切变线',
     explain:'无',
@@ -59,7 +59,7 @@ const historyData = [{
     num: '2',
     beginDate: '2019-01-15 14:00',
     endDate: '2019-01-18 14:00',
-    tags: ['查看详情2'],
+    tags: ['查看详情'],
     weatherType: '冰雹/大风/强降水',
     weatherSystem:'高气压/高压脊/气旋/切变线',
     explain:'无',
@@ -278,7 +278,6 @@ const treeData = [
     
   
 ]
-
 // 天气类型
 const weatherTypeOptions = ['冰雹','大风','雾霾','强降水','雷暴大风']
 // 天气系统
@@ -303,7 +302,7 @@ export default{
           treeData,
           isExpand:false,
           disabled:false,
-          checkedKeys:[['实况-强天气'],['监测-强天气'],[],[],[]],
+          checkedKeys:[['实况-强天气'],['监测-强天气','监测-卫星-时间累积次数'],[],[],[]],
           
 
 
@@ -324,8 +323,8 @@ export default{
         }
       },
     methods:{
-      ccc(a){
-        console.log(11,a)
+      ccc(a,node){
+        console.log(a,node.halfCheckedKeys)
       },
       // 产品类型显示隐藏
       isCheckProduct(isCheckShow){
@@ -370,7 +369,9 @@ export default{
 
       // 表格详情点击
       handelClick(e){
-        console.log(e.target.innerHTML)
+        this.isCheckShow = true
+        this.isConfirm = false
+        this.disabled = true
       },
       
 
@@ -397,7 +398,8 @@ export default{
 
     watch:{
       checkedKeys(val){
-        console.log(Array.prototype.concat.apply([], val))
+        console.log(val)
+        // console.log(Array.prototype.concat.apply([], val))
 
       }
     }

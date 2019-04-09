@@ -180,6 +180,201 @@
                         <td class="mainboard">曹艳察</td>
                         <td></td>
                     </tr>
+
+                    <tr>
+                        <td>8</td>
+                        <td>一</td>
+                        <td class="chief">樊利强</td>
+                        <td rowspan="7"  class="chief">张小玲</td>
+                        <td class="foreman" >周康辉</td>
+                        <td class="foreman" >康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td>周云霞</td>
+
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>二</td>
+                        <td class="chief">樊利强</td>
+                        <td class="foreman">周康辉</td>
+                        <td class="foreman">康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td>周云霞</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>三</td>
+                        <td class="chief">樊利强</td>
+                        <td class="foreman">周康辉</td>
+                        <td class="foreman">康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td>周云霞</td>
+
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>四</td>
+                        <td class="chief">樊利强</td>
+                        <td class="foreman">周康辉</td>
+                        <td class="foreman">康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td>黄艇</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>五</td>
+                        <td class="chief">樊利强</td>
+                        <td class="foreman">周康辉</td>
+                        <td class="foreman">康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td>黄艇</td>
+
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td class="red">六</td>
+                        <td class="chief">樊利强</td>
+                        <td class="foreman">周康辉</td>
+                        <td class="foreman">康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td class="red">日</td>
+                        <td class="chief">樊利强</td>
+                        <td class="foreman">周康辉</td>
+                        <td class="foreman">康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>一</td>
+                        <td class="chief">樊利强</td>
+                        <td rowspan="7"  class="chief">张小玲</td>
+                        <td class="foreman" >周康辉</td>
+                        <td class="foreman" >康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td>周云霞</td>
+
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>二</td>
+                        <td class="chief">樊利强</td>
+                        <td class="foreman">周康辉</td>
+                        <td class="foreman">康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td>周云霞</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>三</td>
+                        <td class="chief">樊利强</td>
+                        <td class="foreman">周康辉</td>
+                        <td class="foreman">康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td>周云霞</td>
+
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>四</td>
+                        <td class="chief">樊利强</td>
+                        <td class="foreman">周康辉</td>
+                        <td class="foreman">康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td>黄艇</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>五</td>
+                        <td class="chief">樊利强</td>
+                        <td class="foreman">周康辉</td>
+                        <td class="foreman">康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td>黄艇</td>
+
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td class="red">六</td>
+                        <td class="chief">樊利强</td>
+                        <td class="foreman">周康辉</td>
+                        <td class="foreman">康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td class="red">日</td>
+                        <td class="chief">樊利强</td>
+                        <td class="foreman">周康辉</td>
+                        <td class="foreman">康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>一</td>
+                        <td class="chief">樊利强</td>
+                        <td rowspan="7"  class="chief">张小玲</td>
+                        <td class="foreman" >周康辉</td>
+                        <td class="foreman" >康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td>周云霞</td>
+
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>二</td>
+                        <td class="chief">樊利强</td>
+                        <td class="foreman">周康辉</td>
+                        <td class="foreman">康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td>周云霞</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>三</td>
+                        <td class="chief">樊利强</td>
+                        <td class="foreman">周康辉</td>
+                        <td class="foreman">康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td>周云霞</td>
+
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>四</td>
+                        <td class="chief">樊利强</td>
+                        <td class="foreman">周康辉</td>
+                        <td class="foreman">康文苑</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td class="mainboard">曹艳察</td>
+                        <td>黄艇</td>
+                        
+                    </tr>
                 </tbody>
             </table>
 

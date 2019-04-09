@@ -22,6 +22,7 @@
                         font-size 12px
                         color: rgb( 44, 76, 112 )
                         &.filt
+                            cursor pointer
                             span    
                                 display inline-block
                                 width 81px
@@ -107,7 +108,8 @@
                         
                         .weatherType_list
                             display flex
-                            justify-content space-around
+                            width 90%
+                            margin 0 auto
                             margin-bottom 0
                             li
                                 border 1px solid #ccdcf3   
@@ -125,15 +127,16 @@
                             
                     // 天气系统
                     .weather_system
-                        .check
-                            width 98%
-                            height 27px
+                        .w_title
+                            padding-left 62px
+                        .systemList
+                            width 90%
                             margin 0 auto
-                            line-height 27px
-                            border 1px solid #d2d2d2
-                            border-radius 8px
                             color #1958b5
-                            padding-left 15px  
+                            display flex
+                            flex-wrap: wrap
+                            justify-content: space-around
+                            // padding-left 15px  
                             cursor pointer
                     // 选择地区    
                     .region_check
@@ -311,27 +314,31 @@
                 color #303030
                 font-size 14px
                 &>li
-                    min-height 500px
-                    padding 16px 8px 0 8px
+                    min-width: 300px
+                    height: 500px
+                    overflow auto
+                    padding 16px 12px
                     border-radius 5px
                     border 1px solid #dedede
                     margin-left 10px
                     background-color #fff
                     font-size 14px
                     color: rgb( 86, 86, 86 )
-                    &.jiantou
-                        background #eff2f5
-                        border none
-                        width 45px
-                        &::after
-                            content:''
-                            display inline-block
-                            height 100%
-                            vertical-align middle
-                        img
-                            vertical-align middle
-                    div
+                .jiantou
+                    background #eff2f5
+                    border none
+                    width 45px
+                    margin-left: 15px
+                    &::after
+                        content:''
+                        display inline-block
+                        height 100%
+                        vertical-align middle
+                    img
+                        vertical-align middle
+                    &>div
                         margin 5px 0
+                        
                         .second_level
                             div
                                 padding-left 20px

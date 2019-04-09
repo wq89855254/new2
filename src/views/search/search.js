@@ -83,7 +83,9 @@ const tableData = [{
     emptyRate: '0.64',
     failRate:'0.39'
   },];
-var url = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYmlua29sIiwiYSI6ImNqdTJjcGg0bDA4ZWczeWxzY3M0N3YzZnIifQ.aemye-xFza6C0zXqXLLkqA'
+var url = 'http://10.20.67.111:80/MapCache/googleMap/gis/mixed/Map_x={x}y={y}zoom={z}.png'
+import '../../assets/js/pather-src'
+
 export default{
     data(){
         return {
@@ -105,35 +107,46 @@ export default{
         }
     },
     mounted(){
-        var leafletMap = L.map('map').setView([41, 123], 5);
-        L.tileLayer(url, {
-            maxZoom: 18,
-            id: 'mapbox.streets'
-        }).addTo(leafletMap);
-        //增加一个marker ，地图上的标记，并绑定了一个popup，默认打开
-        L.marker([41, 123]).addTo(leafletMap)
-                .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
-        //增加一个圈，设置圆心、半径、样式
-        L.circle([41, 123], 500, {
-                color: 'red',
-                fillColor: '#f03',
-                fillOpacity: 0.5
-        }).addTo(leafletMap).bindPopup("I am a circle.");
-        //增加多边形
-        L.polygon([
-                [41, 123],
-                [39, 121],
-                [41, 126]
-        ]).addTo(leafletMap).bindPopup("I am a polygon.");
-        //为点击地图的事件 增加popup
-        var popup = L.popup();
-        function onMapClick(e) {
-                popup
-                        .setLatLng(e.latlng)
-                        .setContent("You clicked the map at " + e.latlng.toString())
-                        .openOn(leafletMap);
-        }
-        leafletMap.on('click', onMapClick)
+        this.$nextTick(()=>{
+            var leafletMap = L.map('map').setView([41, 123], 5);
+            L.tileLayer(url, {
+                maxZoom: 18,
+                id: 'mapbox.streets'
+            }).addTo(leafletMap);
+    
+            var pather = new L.Pather();
+            leafletMap.addLayer(pather);
+        })
+       
+
+        // //增加一个marker ，地图上的标记，并绑定了一个popup，默认打开
+        // L.marker([41, 123]).addTo(leafletMap)
+        //         .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+        // //增加一个圈，设置圆心、半径、样式
+        // L.circle([41, 123], 500, {
+        //         color: 'red',
+        //         fillColor: '#f03',
+        //         fillOpacity: 0.5
+        // }).addTo(leafletMap).bindPopup("I am a circle.");
+        // //增加多边形
+        // L.polygon([
+        //         [41, 123],
+        //         [39, 121],
+        //         [41, 126]
+        // ]).addTo(leafletMap).bindPopup("I am a polygon.");
+        // //为点击地图的事件 增加popup
+        // var popup = L.popup();
+        // function onMapClick(e) {
+        //         popup
+        //                 .setLatLng(e.latlng)
+        //                 .setContent("You clicked the map at " + e.latlng.toString())
+        //                 .openOn(leafletMap);
+        // }
+        // leafletMap.on('click', onMapClick)
+    
+
+
+        
     },
     methods:{
         // 产品名称多选框选择的回调
@@ -164,6 +177,9 @@ export default{
             this.endDate = mode
 
         }
+    },
+    watch:{
+        
     },
     computed:{
         dateSame(){
