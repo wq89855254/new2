@@ -22,20 +22,20 @@
                         </a-checkbox>
                     </h2>
                     <div class="checkbox">
-                        <a-checkbox-group :value="['主观']" :options="namePlainOptions" v-model="nameCheckedList"  @change="nameCheckChange"/>
+                        <a-checkbox-group  :options="namePlainOptions" v-model="nameCheckedList"  @change="nameCheckChange"/>
                     </div>
                     <div class="timeliness">
                         <span>主班时效</span>
                         <div class="triangle"></div>
-                        <a-radio-group :defaultValue='0-6' >
-                            <a-radio :value="0-6">06</a-radio>
-                            <a-radio :value="12">12</a-radio>
-                            <a-radio :value="18">18</a-radio>
-                            <a-radio :value="24">24</a-radio>
-                            <a-radio :value="0-8.012">08.012</a-radio>
-                            <a-radio :value="0-8.024">08.024</a-radio>
-                            <a-radio :value="2-0.012">20.012</a-radio>
-                            <a-radio :value="20.024">20.024</a-radio>
+                        <a-radio-group v-model="aging" :value='aging' :disabled="!Array.prototype.includes.call(nameCheckedList,'主观')">
+                            <a-radio :value="1" >06</a-radio>
+                            <a-radio :value="2" >12</a-radio>
+                            <a-radio :value="3" >18</a-radio>
+                            <a-radio :value="4" >24</a-radio>
+                            <a-radio :value="5" >08.012</a-radio>
+                            <a-radio :value="6" >08.024</a-radio>
+                            <a-radio :value="7" >20.012</a-radio>
+                            <a-radio :value="8" >20.024</a-radio>
                         </a-radio-group>
                     </div>
                 </div>

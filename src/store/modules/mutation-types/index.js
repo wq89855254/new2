@@ -1,0 +1,1 @@
+export const getDefaultCheck = 'getDefaultCheck'  //获取首页数据

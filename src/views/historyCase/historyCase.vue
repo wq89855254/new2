@@ -14,9 +14,9 @@
             <form class="form">
                 <div class="data wraper">
                     <label for="">开始日期:</label>
-                        <a-date-picker />
+                        <a-date-picker @change="onBeginData"/>
                     <label for="">结束日期:</label>
-                        <a-date-picker />
+                        <a-date-picker @change="onEndData"/>
                         
                 </div>
                 <div class="productType wraper">
@@ -47,11 +47,14 @@
                 </div>
                 <div class="explain wraper">
                     <label for="">归档说明:</label>
-                        <input type="text" placeholder="选填">
+                        <input type="text" placeholder="选填" v-model="saveData.expain">
                 </div>
             </form>
-            <div class="save">
+            <!-- <div class="save">
                 存档
+            </div> -->
+            <div class="saveWrap">
+                <a-button class="save" @click="onSave">存档</a-button>
             </div>
         </div>
         <div class="historyFile">
@@ -59,7 +62,7 @@
             <div class="tb">
                 <a-table
                     class="table"
-                    :dataSource="historyData"
+                    :dataSource="historyDataArr"
                     :pagination="pagination"
                     :loading="loading"
                 >
@@ -123,12 +126,11 @@
 
             <div class="title">请选择产品类型</div>
             <ul class="productList">
-                <li :class="{confirm:isConfirm}" v-for="(tree,index) in treeData" :key="index">
+                <li :class="{confirm:isHideCheck}" v-for="(tree,index) in treeData" :key="index">
                     <a-tree 
                         checkable
                         expand
                         :disabled='disabled'
-                        @check='ccc'
                         :defaultExpandedKeys="['实况','监测','诊断','短临','短期']"
                         :treeData="tree"
                         v-model="checkedKeys[index]"

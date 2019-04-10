@@ -324,32 +324,34 @@
                     background-color #fff
                     font-size 14px
                     color: rgb( 86, 86, 86 )
-                .jiantou
-                    background #eff2f5
-                    border none
-                    width 45px
-                    margin-left: 15px
-                    &::after
-                        content:''
-                        display inline-block
-                        height 100%
-                        vertical-align middle
-                    img
-                        vertical-align middle
-                    &>div
-                        margin 5px 0
-                        
-                        .second_level
-                            div
-                                padding-left 20px
-                        
-                        .product_type
-                            margin 0 5px
-                        img
-                            vertical-align middle
+                
 
-                    .level_cont:not(:last-child)
+                    &>.level_cont
                         border-bottom 1px solid #e8e8e8
+                        :global(.ant-tree li)
+                            display none
+                        :global(.ant-tree-checkbox)  
+                            display none
+                        :global(.ant-tree li.ant-tree-treenode-checkbox-indeterminate)   
+                            display block
+                        :global(.ant-tree li.ant-tree-treenode-checkbox-checked)
+                            position relative
+                            display block
+                        :global(.ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-content-wrapper-normal)
+                            position relative
+                            :after
+                                position absolute
+                                right -20px
+                                top 3px
+                                content: ''
+                                display inline-block
+                                width 18px
+                                height 18px
+                                background-image: url('./imgs/circle_blank.png')
+                        :global(.ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-content-wrapper-normal.ant-tree-node-selected)
+                            :after
+                                background-image: url('./imgs/circle_active.png')
+
                     &.child_choose
                         li
                             padding-left 10px
@@ -380,11 +382,14 @@
                     &.confirm
                         color #fff
                         background linear-gradient(#63b0f9,#3591eb)
+                        cursor pointer
                     &.cancel
                         background-color #e3e3e3
                         color #b8b8b8
                         margin-left 10px
+                        cursor pointer
             .close
                 position absolute
                 right -40px
                 top 10px
+                cursor pointer

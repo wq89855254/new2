@@ -283,14 +283,31 @@ const weatherTypeOptions = ['冰雹','大风','雾霾','强降水','雷暴大风
 // 天气系统
 const weatherSystemOptions = ['高气压','低气压','高压脊','低压槽','气旋','反气旋','切变线','雷暴','热带云团','冷槽','暖脊','龙卷','飑线']
 
+import { Modal } from 'ant-design-vue'
+import moment from 'moment';
+
 export default{
-    
     data() {
         return {
           isCheckShow:false,
-          isConfirmShow:false,
+          isHideCheckShow:false,
+          // 表头信息
           columns,
-          historyData,
+          // 表格内容
+          // historyData,
+          // 存档数据
+          saveData:{
+            key: '',
+            num: '',
+            beginDate: '',
+            endDate: '',
+            tags: '',
+            weatherType: '',
+            weatherSystem:'',
+            explain:'',
+            saveDate:''
+          },
+          historyDataArr:[],
           pagination: {
             pageSize: 2,//每页显示的条数
             showQuickJumper:true,  //快速选择
@@ -318,26 +335,25 @@ export default{
           indeterminateType:false,
           indeterminateSys:false,
           
-          // 是否点击确定
-          isConfirm:false
+          // 是否隐藏多选框
+          isHideCheck:false,
         }
       },
+    
     methods:{
-      ccc(a,node){
-        console.log(a,node.halfCheckedKeys)
-      },
+      
       // 产品类型显示隐藏
       isCheckProduct(isCheckShow){
         this.isCheckShow = isCheckShow
-        this.isConfirm = false
+        this.isHideCheck = false
         this.disabled = false
       },
       // 点击确定
       confirmProduct(){
-        // this.isCheckShow = false
-        this.isConfirm = true
-        this.disabled = true
-        
+        this.isCheckShow = false
+        // this.isHideCheck = true
+        // this.disabled = true
+        this.$store.dispatch('getDefaultCheck',Array.prototype.concat.apply([], this.checkedKeys))
        
       },
       //
@@ -370,11 +386,46 @@ export default{
       // 表格详情点击
       handelClick(e){
         this.isCheckShow = true
-        this.isConfirm = false
+        this.isHideCheck = true
         this.disabled = true
       },
-      
+      //开始日期变化
+      onBeginData(e,date){
+        this.saveData.beginDate = date
+      },
+      //结束日期变化
+      onEndData(e,date){
+        this.saveData.endDate = date
 
+      },
+      //点击存档
+      onSave() {
+        let idx=this.historyDataArr.length + 1
+        // 设置key/num
+        this.saveData.key=this.saveData.num=idx
+        // 时间已在选择的时候刷新
+        //保存tags
+        this.saveData.tags=['查看详情']
+        // 保存天气类型
+        this.saveData.weatherType=this.typeCheckedList
+        // 保存天气系统
+        this.saveData.weatherSystem=this.systemCheckedList
+        // 归档说明已在选择的时候刷新
+        //保存当前时间
+        this.saveData.saveDate=moment().format("YYYY-MM-DD HH:mm:ss")
+        // 添加到存档列表中
+        this.historyDataArr.unshift(this.saveData)
+        // 保存完毕之后将对象重置
+        this.saveData={}
+
+        this.$success({
+          content: (  // JSX support
+            <div>
+              <p>存档成功</p>
+            </div>
+          ),
+        });
+      }
       // check(info){
       //   if(info.children){
       //     check(info.children)
@@ -395,11 +446,10 @@ export default{
       
 
     },
-
+    
     watch:{
       checkedKeys(val){
-        console.log(val)
-        // console.log(Array.prototype.concat.apply([], val))
+        console.log(Array.prototype.concat.apply([], val))
 
       }
     }

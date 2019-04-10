@@ -8,7 +8,7 @@
                 <ul class="product_list">
                     <li>产品类型</li>
                     <li class="filt" @click="onCheckSystem"><span> <img src="./imgs/filt.png" alt="" > 筛选</span></li>
-                    <li class="selected">已选:短期-多模式-NCEP-会商</li>
+                    <li class="selected">已选:{{filter[0]}}</li>
                 </ul>
                  <ul class="date_list">
                     
@@ -168,11 +168,15 @@
                     </div> -->
                     <div class="level_cont">
                          <a-tree 
+                            checkable
                             expand
-                            :defaultExpandedKeys="['实况','监测','诊断','短临','短期']"
+                            :defaultExpandedKeys=defaultChecked
                             :treeData="treeData"
-                            
+                            :defaultCheckedKeys=defaultChecked
+                            @select='onSelect'
+                            :selectedKeys="filter"
                         />
+                            
                     
                     </div>
                    
@@ -181,6 +185,9 @@
                     <img src="./imgs/jiantou.png" alt="">
                 </p>
                 <li class="child_choose">
+
+
+                    
                     <h2 class="title">选择子类</h2>
                     <ul>   
                         <li class="active">温度平流</li>

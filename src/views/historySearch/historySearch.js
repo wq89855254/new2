@@ -203,8 +203,6 @@ const  treeData = [
     
 ]
 
-const select = ['实况-强天气']
-
 // 天气系统
 const weatherSystemOptions = ['高气压','低气压','高压脊','低压槽','反气旋','气旋','雷暴','冷槽','暖脊','龙卷','飑线','切变线','热带云团',]
 
@@ -212,6 +210,7 @@ const tData = [{id:'1',isTbodyCheck:true},{id:'2'},{id:'3'},{id:'4'}]
 
 const showImgs = [{url:require('./imgs/map1.png'),id:'1'},{url:require('./imgs/001.png'),id:'2'},{url:require('./imgs/002.png'),id:'3'},{url:require('./imgs/003.png'),id:'4'}]
 
+import {mapState} from 'vuex'
 import * as axios from "axios";
 
 export default{
@@ -219,11 +218,11 @@ export default{
         return {
             //筛选的树节点信息
             treeData,
-            select,
+            
             // 天气类型多选
             plainOptionsType,
             typeCheckedList:[],
-            //天气系统全选
+            // 天气系统全选
             weatherSystemOptions,
             systemCheckedList:[],
             isCheckAllSystem:false,
@@ -244,10 +243,14 @@ export default{
             // tbody是否选中
             isTbodyCheck:false,
             showImgs,
-            selected:'1'
+            selected:'1',
+            // 筛选的数据
+            filter:[],
         }   
     },
-  
+    mounted(){
+      this.filter.push(this.defaultChecked[0])
+    },
     methods:{
         // 日期变更
         onBeginDate(date,dateString){
@@ -324,8 +327,19 @@ export default{
                     }
                 }
 
+        },
+        //筛选
+        onSelect(filter){
+          this.filter=filter
+          console.log(this.filter)
         }
         
+    },
+    computed:{
+      ...mapState({
+        defaultChecked:state=>state.historyCase.defaultChecked
+
+      })
     },
     watch:{
         checkedList(){

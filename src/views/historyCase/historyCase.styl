@@ -82,12 +82,14 @@
                             input
                                 vertical-align middle
                         :global(.ant-checkbox-group-item)
+                            position relative
                             padding 3px 10px
                             border: 1px solid rgb( 203, 220, 241 );
                             border-radius: 3px;
                             margin-right 12px
                             color #7f7f7f
                             background-image:linear-gradient(#eff5fc ,#dce8f7 15%, #dce8f7 100%);
+                            
  
                 .weatherSystem
                     display flex
@@ -126,16 +128,19 @@
                         height 39px
                         border 1px solid #d0d0d0
                         padding-left 5px
-            .save
+            .saveWrap
+                margin 14px auto
                 width 91px
                 height 28px
-                line-height 28px
-                text-align center
-                margin 14px auto
-                cursor pointer
-                border-radius 16px
-                background linear-gradient(#64b1f9,#3492ea)
-                color #ffffff
+                .save
+                    width 100%
+                    height 100%
+                    line-height 28px
+                    text-align center
+                    cursor pointer
+                    border-radius 16px
+                    background linear-gradient(#64b1f9,#3492ea)
+                    color #ffffff
 
         .historyFile
             width 1488px
